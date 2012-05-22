@@ -2,6 +2,8 @@
 #include "Game/Game.h"
 #include "Managers/UIManager/UIObject.h"
 #include "GSTested_State.h"
+#include "Game/tool/CUnrealMeshFileLoader.h"
+//class SSkinnedMesh;
 /*
 class Shader1 : public video::IShaderConstantSetCallBack
 {
@@ -150,7 +152,7 @@ void GSTested_State::ctor	( const StateMachine *sm )
 
 	/////////////////////////
 	//m_isGame->getSceneManager()->addExternalMeshLoader(new scene::CFBXMeshFileLoader(m_isGame->getSceneManager()));
-	scene::IAnimatedMesh *FBXmesh = m_isGame->getSceneManager()->getMesh ( "data/models/fbx/datgirl.FBX" );
+/*	scene::IAnimatedMesh *FBXmesh = m_isGame->getSceneManager()->getMesh ( "data/models/fbx/datgirl.FBX" );
 
 	if ( !FBXmesh )
 	{
@@ -175,27 +177,38 @@ void GSTested_State::ctor	( const StateMachine *sm )
 		FBXnode->setMaterialFlag ( video::EMF_LIGHTING, false );
 		//FBXnode->setMaterialFlag(video::EMF_NORMALIZE_NORMALS, true);
 	}
-
+*/
 	////////////////////
-	IAnimatedMesh *Unrealmesh = m_isGame->getSceneManager()->getMesh ( "data/models/UnrealMesh/Female.PSK" );
+	IAnimatedMesh *Unrealmesh = m_isGame->getSceneManager()->getMesh ( "data/models/UnrealMesh/char_betty.PSK" );
 	IAnimatedMeshSceneNode *Unrealnode = m_isGame->getSceneManager()->addAnimatedMeshSceneNode ( Unrealmesh );
 
 	if ( Unrealnode )
 	{
 		Unrealnode->setRotation ( vector3df ( -90,180,0 ) );
-		Unrealnode->getMaterial ( 0 ).setTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/models/UnrealMesh/gcloth.tga" ) );
-		Unrealnode->getMaterial ( 1 ).setTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/models/UnrealMesh/gskin.tga" ) );
-		Unrealnode->getMaterial ( 2 ).setTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/models/UnrealMesh/ghair.tga" ) );
+		Unrealnode->getMaterial ( 0 ).setTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/models/UnrealMesh/char_betty_tex.tga" ) );
+		Unrealnode->getMaterial ( 1 ).setTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/models/UnrealMesh/char_betty_tex.tga" ) );
+		Unrealnode->getMaterial ( 2 ).setTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/models/UnrealMesh/char_betty_tex.tga" ) );
 		Unrealnode->setMaterialFlag ( EMF_LIGHTING, false );
-		IAnimatedMesh *Unrealanimation = m_isGame->getSceneManager()->getMesh ( "data/models/UnrealMesh/Female.PSA" );
-		s32 begin=0, end=10;
+		IAnimatedMesh *Unrealanimation = m_isGame->getSceneManager()->getMesh ( "data/models/UnrealMesh/char_betty_anim.PSA" );
+		s32 begin=0, end=550;
 		f32 speed=24;
-		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("Push"), begin, end, speed );
-		//		((SSkinnedMesh*)Unrealanimation)->getFrameLoop( const core::stringc("Push"), begin, end, speed );
+		/*
+		test
+		idle
+		jump
+		run
+		walk
+		*/
+		((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("walk") , begin, end, speed );
+		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("idle") , begin, end, speed );
+		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("jump") , begin, end, speed );
+		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("run") , begin, end, speed );
 		( ( ISkinnedMesh * ) Unrealmesh )->useAnimationFrom ( ( ( ISkinnedMesh * ) Unrealanimation ) );
 		Unrealnode->setFrameLoop ( begin, end );
 		Unrealnode->setAnimationSpeed ( speed );
 		Unrealnode->setLoopMode ( true );
+		Unrealnode->setPosition(core::vector3df ( 0,300,-400 ));
+		Unrealnode->setRotation(core::vector3df ( -90,0,0 ));
 	}
 
 	////////////////////
