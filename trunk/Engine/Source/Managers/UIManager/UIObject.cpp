@@ -15,7 +15,6 @@
 */
 
 #include	"StdAfx.h"
-#ifdef GAMESWF
 #include	"UIObject.h"
 #include	"UIText.h"
 #include	"../../Game/Game.h"
@@ -392,4 +391,4 @@ bool cUIObject::IsVisible ( void ) const
 {
 	return isVisible;
 }
-#endif //#ifdef GAMESWF
+

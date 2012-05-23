@@ -65,7 +65,6 @@
 #include <time.h>
 #include <math.h>
 
-#ifdef GAMESWF
 // ** GameSWF
 #include	<gameswf/gameswf.h>
 #include	<gameswf/gameswf_player.h>
@@ -86,7 +85,6 @@ typedef gameswf::character					*tSwfCharacter;
 typedef tu_file							*tSwfFile;
 
 typedef std::list< cUIObject * >			tUIObjectList;
-#endif
 
 
 // Other include
@@ -100,6 +98,7 @@ typedef std::list< cUIObject * >			tUIObjectList;
 #include "EventManager.h"
 #include "StringManager.h"
 #include "Managers/UIManager/UIManager.h"
+#include "Managers/GameObjectsManager/GameObjectsManager.h"
 //
 #include "Game/Loading.h"
 #include "Game/GameEvents/EvIrrlichtEvents.h"
@@ -117,6 +116,6 @@ using namespace gui;
 #ifdef BOX2D
 #include "Box2D.h"
 #endif
-//#include "Game/Objects/GameObjects.h"
+
 
 #endif
