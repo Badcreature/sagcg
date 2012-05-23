@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IrrBullet", "IrrBullet.vcproj", "{FD3D7869-7385-4464-A06A-06F3CD9149FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD3D7869-7385-4464-A06A-06F3CD9149FB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FD3D7869-7385-4464-A06A-06F3CD9149FB}.Debug|Win32.Build.0 = Debug|Win32
+		{FD3D7869-7385-4464-A06A-06F3CD9149FB}.Release|Win32.ActiveCfg = Release|Win32
+		{FD3D7869-7385-4464-A06A-06F3CD9149FB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

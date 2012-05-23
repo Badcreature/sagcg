@@ -23,6 +23,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\..\Externals\zli
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jpeg", "..\..\Externals\jpeg\jpeg\jpeg.vcproj", "{8D4A6865-B36E-4412-A338-23C4BD0B8451}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IrrBullet", "..\..\Externals\IrrBullet\Projects\win32\IrrBullet.vcproj", "{7A2C27A5-2645-41C9-934B-3A751B51A003}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua", "..\..\Externals\Lua\Projects\win32\Lua.vcproj", "{4EA391F4-867C-4803-B948-9D6CB6F4B23E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -57,6 +61,14 @@ Global
 		{8D4A6865-B36E-4412-A338-23C4BD0B8451}.Debug|Win32.Build.0 = Debug|Win32
 		{8D4A6865-B36E-4412-A338-23C4BD0B8451}.Release|Win32.ActiveCfg = Release|Win32
 		{8D4A6865-B36E-4412-A338-23C4BD0B8451}.Release|Win32.Build.0 = Release|Win32
+		{7A2C27A5-2645-41C9-934B-3A751B51A003}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7A2C27A5-2645-41C9-934B-3A751B51A003}.Debug|Win32.Build.0 = Debug|Win32
+		{7A2C27A5-2645-41C9-934B-3A751B51A003}.Release|Win32.ActiveCfg = Release|Win32
+		{7A2C27A5-2645-41C9-934B-3A751B51A003}.Release|Win32.Build.0 = Release|Win32
+		{4EA391F4-867C-4803-B948-9D6CB6F4B23E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4EA391F4-867C-4803-B948-9D6CB6F4B23E}.Debug|Win32.Build.0 = Debug|Win32
+		{4EA391F4-867C-4803-B948-9D6CB6F4B23E}.Release|Win32.ActiveCfg = Release|Win32
+		{4EA391F4-867C-4803-B948-9D6CB6F4B23E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

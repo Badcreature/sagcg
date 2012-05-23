@@ -233,7 +233,7 @@ void GSTested_State::ctor	( const StateMachine *sm )
 		run
 		walk
 		*/
-		( ( SSkinnedMesh * ) Unrealanimation )->getFrameLoop ( core::stringc ( "walk" ) , begin, end, speed );
+		//( ( SSkinnedMesh * ) Unrealanimation )->getFrameLoop ( core::stringc ( "walk" ) , begin, end, speed );
 		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("idle") , begin, end, speed );
 		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("jump") , begin, end, speed );
 		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("run") , begin, end, speed );
