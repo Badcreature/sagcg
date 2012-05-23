@@ -2,6 +2,10 @@
 //
 //  Filename:	UIObject.h
 //	Created:	23:8:2011   15:31
+//
+//  This source code has been donated to the Public Domain.  Do
+//  whatever you want with it.
+//
 
 #ifndef		__UIObject_H__
 #define		__UIObject_H__

@@ -1,6 +1,10 @@
 //
 //  Filename:	UIText.cpp
 //	Created:	27:8:2011   13:21
+//
+//  This source code has been donated to the Public Domain.  Do
+//  whatever you want with it.
+//
 
 /*
 =========================================================================================
