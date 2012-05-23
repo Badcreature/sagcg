@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)\..\..\Externals&quot;;&quot;$(SolutionDir)\..\..\Externals\Box2D&quot;;&quot;$(SolutionDir)\..\..\Externals\Irrlicht\include&quot;;&quot;$(SolutionDir)\..\..\Source&quot;;&quot;$(SolutionDir)\..\..\Source\Core&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\LogManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\TimeManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\StateManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\EventManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\StringManager&quot;;../../Externals/gameswf;../../Externals/freetype/include"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)\..\..\Externals&quot;;&quot;$(SolutionDir)\..\..\Externals\Box2D&quot;;&quot;$(SolutionDir)\..\..\Externals\Irrlicht\include&quot;;&quot;$(SolutionDir)\..\..\Source&quot;;&quot;$(SolutionDir)\..\..\Source\Core&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\LogManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\TimeManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\StateManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\EventManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\StringManager&quot;;&quot;$(SolutionDir)\..\..\Externals\gameswf&quot;;&quot;$(SolutionDir)\..\..\Externals\freetype\include&quot;;&quot;$(SolutionDir)\..\..\Externals\IrrBullet\source&quot;;&quot;$(SolutionDir)\..\..\Externals\Lua\src&quot;;&quot;$(SolutionDir)\..\..\Externals\OpenAL\include&quot;"
 				PreprocessorDefinitions="_CRT_SECURE_NO_WARNINGS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -63,10 +63,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="opengl32.lib gameswf.lib winmm.lib freetype.lib zlib.lib jpeg.lib"
+				AdditionalDependencies="opengl32.lib gameswf.lib winmm.lib freetype.lib zlib.lib jpeg.lib IrrBullet.lib Box2D.lib Lua.lib OpenAL32.lib"
 				OutputFile="$(SolutionDir)\..\..\Build\$(ProjectName)$(PlatformName).exe"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Box2D\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\freetype\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\gameswf\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Irrlicht\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\jpeg\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\zlib\&quot;"
+				AdditionalLibraryDirectories="&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Box2D\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\freetype\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\gameswf\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Irrlicht\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\jpeg\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\zlib\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\IrrBullet\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Lua\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\OpenAL\&quot;"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(TargetPath)$(TargetName).pdb"
 				SubSystem="1"
@@ -119,7 +119,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)\..\..\Externals&quot;;&quot;$(SolutionDir)\..\..\Externals\Box2D&quot;;&quot;$(SolutionDir)\..\..\Externals\Irrlicht\include&quot;;&quot;$(SolutionDir)\..\..\Source&quot;;&quot;$(SolutionDir)\..\..\Source\Core&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\LogManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\TimeManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\StateManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\EventManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\StringManager&quot;;../../Externals/gameswf;../../Externals/freetype/include"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)\..\..\Externals&quot;;&quot;$(SolutionDir)\..\..\Externals\Box2D&quot;;&quot;$(SolutionDir)\..\..\Externals\Irrlicht\include&quot;;&quot;$(SolutionDir)\..\..\Source&quot;;&quot;$(SolutionDir)\..\..\Source\Core&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\LogManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\TimeManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\StateManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\EventManager&quot;;&quot;$(SolutionDir)\..\..\Source\Managers\StringManager&quot;;&quot;$(SolutionDir)\..\..\Externals\gameswf&quot;;&quot;$(SolutionDir)\..\..\Externals\freetype\include&quot;;&quot;$(SolutionDir)\..\..\Externals\IrrBullet\source&quot;;&quot;$(SolutionDir)\..\..\Externals\Lua\src&quot;;&quot;$(SolutionDir)\..\..\Externals\OpenAL\include&quot;"
 				PreprocessorDefinitions="_CRT_SECURE_NO_WARNINGS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -141,10 +141,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="opengl32.lib gameswf.lib winmm.lib freetype.lib zlib.lib jpeg.lib"
+				AdditionalDependencies="opengl32.lib gameswf.lib winmm.lib freetype.lib zlib.lib jpeg.lib IrrBullet.lib Box2D.lib Lua.lib OpenAL32.lib"
 				OutputFile="$(SolutionDir)\..\..\Build\$(ProjectName)$(PlatformName).exe"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Box2D\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\freetype\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\gameswf\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Irrlicht\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\jpeg\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\zlib\&quot;"
+				AdditionalLibraryDirectories="&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Box2D\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\freetype\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\gameswf\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Irrlicht\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\jpeg\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\zlib\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\IrrBullet\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\Lua\&quot;;&quot;$(SolutionDir)\..\..\Lib\Lib_$(PlatformName)_$(ConfigurationName)\OpenAL\&quot;"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(TargetPath)$(TargetName).pdb"
 				SubSystem="1"
@@ -296,6 +296,18 @@
 				</File>
 				<File
 					RelativePath="..\..\Source\Managers\UIManager\UIText.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="GameObjectsManager"
+				>
+				<File
+					RelativePath="..\..\Source\Managers\GameObjectsManager\GameObjectsManager.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Source\Managers\GameObjectsManager\GameObjectsManager.h"
 					>
 				</File>
 			</Filter>
