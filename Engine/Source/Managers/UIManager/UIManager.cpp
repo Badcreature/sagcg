@@ -15,7 +15,7 @@
 */
 
 #include	"StdAfx.h"
-#ifdef GAMESWF
+
 #include	"UIManager.h"
 #include	"UIObject.h"
 
@@ -150,4 +150,4 @@ void cUIManager::LogCallback ( bool error, const char *message )
 		printf ( message );
 	}
 }
-#endif //#ifdef GAMESWF
+

@@ -85,9 +85,7 @@ Game::Game()
 	m_GUIEnvironment=NULL;
 	m_lastFPS = -1;
 	m_font = 0;
-#ifdef GAMESWF
 	m_UIManager=NULL;
-#endif
 	m_MouseButton=false;
 	m_MouseInputX=0;
 	m_MouseInputY=0;
@@ -119,12 +117,11 @@ IGUIEnvironment	*Game::getGUIEnvironment()
 	return m_GUIEnvironment;
 }
 
-#ifdef GAMESWF
+
 cUIManager	*Game::getUIManager()
 {
 	return m_UIManager;
 }
-#endif
 
 #ifdef BOX2D
 b2World	*Game::get2DPhysicsWorld()
@@ -176,9 +173,7 @@ bool Game::Init()
 	psk_loader->drop( );
 	psa_loader->drop( );
 #endif
-#ifdef GAMESWF
 	m_UIManager = new cUIManager;
-#endif
 
 	if ( m_IrrlichtDevice->getFileSystem()->addFolderFileArchive ( "data/" ) )
 	{
@@ -247,10 +242,8 @@ bool Game::Run()
 
 void Game::UIManagerUpdate ( float deltatime )
 {
-#ifdef GAMESWF
 	m_UIManager->UpdateMouseState ( m_MouseInputX, m_MouseInputY, m_MouseButton );
 	m_UIManager->Update ( deltatime ,false );
-#endif
 }
 
 

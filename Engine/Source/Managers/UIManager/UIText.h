@@ -5,7 +5,6 @@
 //  This source code has been donated to the Public Domain.  Do
 //  whatever you want with it.
 //
-#ifdef GAMESWF
 #ifndef		__UIText_H__
 #define		__UIText_H__
 
@@ -39,5 +38,3 @@ class cUIText : public cUIObject
 };
 
 #endif	/*	!__UIText_H__	*/
-
-#endif //#ifdef GAMESWF

@@ -15,7 +15,6 @@
 */
 
 #include	"StdAfx.h"
-#ifdef GAMESWF
 #include	"UIText.h"
 
 /*
@@ -44,5 +43,3 @@ const char *cUIText::GetText ( void ) const
 {
 	return NULL;
 }
-
-#endif //#ifdef GAMESWF

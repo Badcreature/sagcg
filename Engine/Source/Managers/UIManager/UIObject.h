@@ -1,4 +1,3 @@
-#ifdef GAMESWF
 //
 //  Filename:	UIObject.h
 //	Created:	23:8:2011   15:31
@@ -82,5 +81,3 @@ class cUIObject
 };
 
 #endif	/*	!__UIObject_H__	*/
-
-#endif //#ifdef GAMESWF

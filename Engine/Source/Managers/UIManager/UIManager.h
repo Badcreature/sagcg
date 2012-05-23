@@ -1,4 +1,3 @@
-#ifdef GAMESWF
 //
 //  Filename:	UIManager.h
 //	Created:	23:8:2011   15:26
@@ -58,4 +57,3 @@ class cUIManager
 };
 
 #endif	/*	!__UIManager_H__	*/
-#endif //ifdef GAMESWF
