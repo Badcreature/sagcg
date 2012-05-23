@@ -2,6 +2,10 @@
 //
 //  Filename:	UIManager.h
 //	Created:	23:8:2011   15:26
+//
+//  This source code has been donated to the Public Domain.  Do
+//  whatever you want with it.
+//
 
 #ifndef		__UIManager_H__
 #define		__UIManager_H__

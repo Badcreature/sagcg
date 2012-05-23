@@ -1,3 +1,37 @@
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Created by Andrey Sidorov.
+//	Copyright (C) 2012 Andrey Sidorov.
+//
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//								  License.
+//
+//  This software is provided 'as-is', without any express or implied
+//  warranty.  In no event will the authors be held liable for any damages
+//  arising from the use of this software.
+//
+//  Permission is granted to anyone to use this software for any purpose,
+//  including commercial applications, and to alter it and redistribute it
+//  freely, subject to the following restrictions:
+//
+//  1. The origin of this software must not be misrepresented; you must not
+//     claim that you wrote the original software. If you use this software
+//     in a product, an acknowledgment in the product documentation would be
+//     appreciated but is not required.
+//  2. Altered source versions must be plainly marked as such, and must not be
+//     misrepresented as being the original software.
+//  3. This notice may not be removed or altered from any source distribution.
+//
+//  Please note that the SaGCG (simple-and-good-core-games) Engine is based in part on the work of the
+//  Independent JPEG Group, zlib,libPng, Box2D, freetype, bullet, OpenAL, gameswf This means that if you use
+//  the SaGCG (simple-and-good-core-games) Engine in your product, you must acknowledge somewhere in your
+//  documentation that you've used the IJG code. It would also be nice to mention
+//  that you use the SaGCG (simple-and-good-core-games)Engine, Irrlicht Engine, zlib, libPng, Box2D, freetype,
+//  bullet, OpenAL, gameswf. See the README files in the jpeglib, zlib, libPng, Box2D, freetype, bullet, OpenAL,
+//  gameswf for further informations.
+//
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #include "StdAfx.h"
 #include "Game/Game.h"
 #include "Managers/UIManager/UIObject.h"
@@ -152,32 +186,32 @@ void GSTested_State::ctor	( const StateMachine *sm )
 
 	/////////////////////////
 	//m_isGame->getSceneManager()->addExternalMeshLoader(new scene::CFBXMeshFileLoader(m_isGame->getSceneManager()));
-/*	scene::IAnimatedMesh *FBXmesh = m_isGame->getSceneManager()->getMesh ( "data/models/fbx/datgirl.FBX" );
+	/*	scene::IAnimatedMesh *FBXmesh = m_isGame->getSceneManager()->getMesh ( "data/models/fbx/datgirl.FBX" );
 
-	if ( !FBXmesh )
-	{
-		std::cout << "Unable to load mesh: " << std::endl;
-		return;
-	}
-
-	else
-	{
-		scene::ISceneNode *FBXnode = m_isGame->getSceneManager()->addAnimatedMeshSceneNode ( FBXmesh );
-
-		if ( !FBXnode )
+		if ( !FBXmesh )
 		{
-			std::cout << "Unable to create node with mesh: " << std::endl;
+			std::cout << "Unable to load mesh: " << std::endl;
 			return;
 		}
 
-		FBXnode->setMaterialFlag ( EMF_LIGHTING, false );
-		FBXnode->setDebugDataVisible ( scene::EDS_FULL&~scene::EDS_NORMALS );
-		FBXnode->setDebugDataVisible ( scene::EDS_HALF_TRANSPARENCY );
-		FBXnode->setDebugDataVisible ( scene::EDS_SKELETON );
-		FBXnode->setMaterialFlag ( video::EMF_LIGHTING, false );
-		//FBXnode->setMaterialFlag(video::EMF_NORMALIZE_NORMALS, true);
-	}
-*/
+		else
+		{
+			scene::ISceneNode *FBXnode = m_isGame->getSceneManager()->addAnimatedMeshSceneNode ( FBXmesh );
+
+			if ( !FBXnode )
+			{
+				std::cout << "Unable to create node with mesh: " << std::endl;
+				return;
+			}
+
+			FBXnode->setMaterialFlag ( EMF_LIGHTING, false );
+			FBXnode->setDebugDataVisible ( scene::EDS_FULL&~scene::EDS_NORMALS );
+			FBXnode->setDebugDataVisible ( scene::EDS_HALF_TRANSPARENCY );
+			FBXnode->setDebugDataVisible ( scene::EDS_SKELETON );
+			FBXnode->setMaterialFlag ( video::EMF_LIGHTING, false );
+			//FBXnode->setMaterialFlag(video::EMF_NORMALIZE_NORMALS, true);
+		}
+	*/
 	////////////////////
 	IAnimatedMesh *Unrealmesh = m_isGame->getSceneManager()->getMesh ( "data/models/UnrealMesh/char_betty.PSK" );
 	IAnimatedMeshSceneNode *Unrealnode = m_isGame->getSceneManager()->addAnimatedMeshSceneNode ( Unrealmesh );
@@ -199,7 +233,7 @@ void GSTested_State::ctor	( const StateMachine *sm )
 		run
 		walk
 		*/
-		((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("walk") , begin, end, speed );
+		( ( SSkinnedMesh * ) Unrealanimation )->getFrameLoop ( core::stringc ( "walk" ) , begin, end, speed );
 		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("idle") , begin, end, speed );
 		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("jump") , begin, end, speed );
 		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("run") , begin, end, speed );
@@ -207,8 +241,8 @@ void GSTested_State::ctor	( const StateMachine *sm )
 		Unrealnode->setFrameLoop ( begin, end );
 		Unrealnode->setAnimationSpeed ( speed );
 		Unrealnode->setLoopMode ( true );
-		Unrealnode->setPosition(core::vector3df ( 0,300,-400 ));
-		Unrealnode->setRotation(core::vector3df ( -90,0,0 ));
+		Unrealnode->setPosition ( core::vector3df ( 0,300,-400 ) );
+		Unrealnode->setRotation ( core::vector3df ( -90,0,0 ) );
 	}
 
 	////////////////////

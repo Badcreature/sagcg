@@ -329,7 +329,7 @@ namespace irr
 				}
 
 				//bool getFrameLoop ( const core::stringc &animationName, s32 &begin, s32 &end, f32 &fps )
-				        bool getFrameLoop( core::stringc& animationName, s32& begin, s32& end, f32& fps )
+				bool getFrameLoop ( core::stringc &animationName, s32 &begin, s32 &end, f32 &fps )
 				{
 					s32 id = Anims.linear_search ( AnimInfo ( animationName ) );
 
