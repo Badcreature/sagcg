@@ -50,6 +50,10 @@
 // Enable Box2d engine
 //#define BOX2D
 
+// Enable Bullet engine
+#define IRRBULLET
+#define IRRBULLET_SHOW_DEBUG true
+
 // Enable GameSWF engine
 #define GAMESWF
 

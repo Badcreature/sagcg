@@ -132,22 +132,53 @@ void GSTested_State::ctor	( const StateMachine *sm )
 	camera->setTarget ( core::vector3df ( 0,400,-1 ) );
 	camera->setFarValue ( 42000.0f );
 	cameraFPS->setFarValue ( 42000.0f );
-	m_isGame->getIrrlichtDevice()->getFileSystem()->addZipFileArchive ( "data/maps/level1.pxd" );
-	scene::IAnimatedMesh *mesh = m_isGame->getSceneManager()->getMesh ( "level1.3ds" );
-	mesh->setMaterialFlag ( EMF_LIGHTING, false );
-	//m_isGame->getSceneManager()->getRootSceneNode()->setMaterialType( ( video::E_MATERIAL_TYPE ) shadersMaterial1 );
-	scene::ISceneNode *node = 0;
+	/*
+		m_isGame->getIrrlichtDevice()->getFileSystem()->addZipFileArchive ( "data/maps/level1.pxd" );
+		scene::IAnimatedMesh *mesh = m_isGame->getSceneManager()->getMesh ( "level1.3ds" );
+		mesh->setMaterialFlag ( EMF_LIGHTING, false );
+		//m_isGame->getSceneManager()->getRootSceneNode()->setMaterialType( ( video::E_MATERIAL_TYPE ) shadersMaterial1 );
+		scene::ISceneNode *node = 0;
 
-	if ( mesh )
+		if ( mesh )
+		{
+			node = m_isGame->getSceneManager()->addOctreeSceneNode ( mesh->getMesh ( 0 ), 0, -1, 1024 );
+		}
+
+		if ( node )
+		{
+			node->setPosition ( core::vector3df ( 0,0,0 ) );
+		}
+	*/
+	////////////////////////////////////////
+	ISceneNode *Node = m_isGame->getSceneManager()->addCubeSceneNode ( 1.0 );
+	Node->setScale ( vector3df ( 700,3,700 ) ); // 400, 3, 400
+	Node->setPosition ( vector3df ( 0,150,-400 ) );
+		//Unrealnode->setPosition ( core::vector3df ( 0,300,-400 ) );
+	Node->setMaterialFlag ( video::EMF_LIGHTING, false );
+	Node->setMaterialTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/crazysky/blue.jpg" ) );
+	ICollisionShape *shape = new IBoxShape ( Node, 0, false );
+	//shape->setMargin(0.01);
+	IRigidBody *body;
+	body = m_isGame->IrrBulletPhysicsWorld()->addRigidBody ( shape );
+	irr::u32 rows=10;
+	irr::u32 columns=10;
+
+	for ( u32 j=0; j < columns; j++ )
 	{
-		node = m_isGame->getSceneManager()->addOctreeSceneNode ( mesh->getMesh ( 0 ), 0, -1, 1024 );
+		for ( u32 i=0; i < rows; i++ )
+		{
+			irr::scene::ISceneNode *Node = m_isGame->getSceneManager()->addCubeSceneNode ( 1.0f );
+			Node->setScale ( vector3df ( rand()%30+1,rand()%30+1,rand()%30+1 ) );
+			Node->setPosition ( vector3df ( 30*j, 150+30*i+3, -400 ) );
+			Node->setMaterialFlag ( irr::video::EMF_LIGHTING, false );
+			Node->setMaterialTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/crazysky/granitestone.jpg" ) );
+			ICollisionShape *shape = new IBoxShape ( Node, 30, false );
+			IRigidBody *body;
+			body = m_isGame->IrrBulletPhysicsWorld()->addRigidBody ( shape );
+		}
 	}
 
-	if ( node )
-	{
-		node->setPosition ( core::vector3df ( 0,0,0 ) );
-	}
-
+	//////////////////////////////////////////////
 	renderSkyTexture=m_isGame->getVideoDriver()->addRenderTargetTexture ( core::dimension2d< u32 > ( 512,512 ), "RTT1" );
 	scene::ISceneNode *skySceneNode=m_isGame->getSceneManager()->addSkyBoxSceneNode (
 	                                    m_isGame->getVideoDriver()->getTexture ( "data/loading.png" ),
@@ -233,7 +264,8 @@ void GSTested_State::ctor	( const StateMachine *sm )
 		run
 		walk
 		*/
-		//( ( SSkinnedMesh * ) Unrealanimation )->getFrameLoop ( core::stringc ( "walk" ) , begin, end, speed );
+		core::stringc SelectAnimation="jump";
+		( ( SSkinnedMesh * ) Unrealanimation )->getFrameLoop ( SelectAnimation , begin, end, speed );
 		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("idle") , begin, end, speed );
 		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("jump") , begin, end, speed );
 		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("run") , begin, end, speed );

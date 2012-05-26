@@ -87,6 +87,14 @@ bool Application::Update()
 #endif
 		//////////////////////////////////////
 		//////////////////////////////////////
+#ifdef IRRBULLET
+
+		if ( m_isGame->IrrBulletPhysicsWorld() )
+		{
+			m_isGame->IrrBulletPhysicsWorld()->stepSimulation ( m_dt*2 );
+		}
+
+#endif
 		m_isStateMachine->update ( m_dt );
 		m_isEventManager->Update ( ( double ) m_dt );
 		m_isGame->UIManagerUpdate ( ( float ) m_dt );

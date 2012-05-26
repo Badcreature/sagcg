@@ -44,7 +44,7 @@
 // Fedaultd and Setting
 #include "Commons.h"
 
-#if WIN32
+#ifdef WIN32
 #include <windows.h>
 #include <mmsystem.h>
 #pragma comment(lib, "Irrlicht.lib")
@@ -115,6 +115,12 @@ using namespace gui;
 //
 #ifdef BOX2D
 #include "Box2D.h"
+#endif
+#ifdef IRRBULLET
+#include <irrbullet.h>
+#ifdef WIN32
+#pragma comment(lib, "IrrBullet.lib")
+#endif
 #endif
 
 
