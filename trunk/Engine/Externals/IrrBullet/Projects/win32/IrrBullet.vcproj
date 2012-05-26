@@ -389,7 +389,15 @@
 						Name="BulletCollision"
 						>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp"
 							>
 						</File>
 						<File
@@ -397,7 +405,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btBox2dShape.cpp"
 							>
 						</File>
 						<File
@@ -405,7 +421,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btBoxBoxDetector.cpp"
 							>
 						</File>
 						<File
@@ -417,6 +441,10 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btBoxShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btBoxShape.h"
 							>
 						</File>
@@ -425,11 +453,23 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btBroadphaseProxy.h"
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btCapsuleShape.cpp"
 							>
 						</File>
 						<File
@@ -438,6 +478,10 @@
 						</File>
 						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btClipPolygon.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp"
 							>
 						</File>
 						<File
@@ -453,6 +497,10 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btCollisionDispatcher.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btCollisionDispatcher.h"
 							>
 						</File>
@@ -461,7 +509,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btCollisionObject.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btCollisionObject.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btCollisionShape.cpp"
 							>
 						</File>
 						<File
@@ -469,7 +525,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btCollisionWorld.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btCollisionWorld.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.cpp"
 							>
 						</File>
 						<File
@@ -477,7 +541,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btCompoundShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btCompoundShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConcaveShape.cpp"
 							>
 						</File>
 						<File
@@ -485,7 +557,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConeShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConeShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btContactProcessing.cpp"
 							>
 						</File>
 						<File
@@ -493,7 +573,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.cpp"
 							>
 						</File>
 						<File
@@ -501,7 +589,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConvex2dShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConvex2dShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btConvexCast.cpp"
 							>
 						</File>
 						<File
@@ -509,7 +605,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.cpp"
 							>
 						</File>
 						<File
@@ -517,7 +621,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConvexHullShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConvexHullShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConvexInternalShape.cpp"
 							>
 						</File>
 						<File
@@ -529,7 +641,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConvexPointCloudShape.cpp"
 							>
 						</File>
 						<File
@@ -537,7 +657,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConvexShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConvexShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.cpp"
 							>
 						</File>
 						<File
@@ -545,7 +673,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btCylinderShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btCylinderShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btDbvt.cpp"
 							>
 						</File>
 						<File
@@ -553,7 +689,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btDbvtBroadphase.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btDbvtBroadphase.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.cpp"
 							>
 						</File>
 						<File
@@ -565,7 +709,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btDispatcher.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btDispatcher.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.cpp"
 							>
 						</File>
 						<File
@@ -573,7 +725,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btEmptyShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btEmptyShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btGenericPoolAllocator.cpp"
 							>
 						</File>
 						<File
@@ -585,11 +745,23 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btGhostObject.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btGhostObject.h"
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btGImpactBvh.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btGImpactBvh.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.cpp"
 							>
 						</File>
 						<File
@@ -601,7 +773,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btGImpactQuantizedBvh.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btGImpactQuantizedBvh.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btGImpactShape.cpp"
 							>
 						</File>
 						<File
@@ -609,7 +789,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btGjkEpa2.cpp"
 							>
 						</File>
 						<File
@@ -617,7 +805,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.cpp"
 							>
 						</File>
 						<File
@@ -625,7 +821,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btInternalEdgeUtility.cpp"
 							>
 						</File>
 						<File
@@ -637,6 +841,10 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btManifoldResult.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btManifoldResult.h"
 							>
 						</File>
@@ -645,7 +853,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btMinkowskiSumShape.cpp"
 							>
 						</File>
 						<File
@@ -653,7 +869,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btMultiSapBroadphase.cpp"
 							>
 						</File>
 						<File
@@ -661,11 +885,23 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btMultiSphereShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btMultiSphereShape.h"
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btOptimizedBvh.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btOptimizedBvh.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btOverlappingPairCache.cpp"
 							>
 						</File>
 						<File
@@ -677,11 +913,19 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btPersistentManifold.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btPersistentManifold.h"
 							>
 						</File>
 						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btPointCollector.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btPolyhedralConvexShape.cpp"
 							>
 						</File>
 						<File
@@ -693,7 +937,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btQuantizedBvh.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btQuantizedBvh.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btRaycastCallback.cpp"
 							>
 						</File>
 						<File
@@ -701,11 +953,23 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.h"
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btShapeHull.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btShapeHull.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\BroadphaseCollision\btSimpleBroadphase.cpp"
 							>
 						</File>
 						<File
@@ -717,7 +981,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btSimulationIslandManager.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btSimulationIslandManager.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.cpp"
 							>
 						</File>
 						<File
@@ -725,7 +997,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btSphereShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btSphereShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.cpp"
 							>
 						</File>
 						<File
@@ -733,7 +1013,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btStaticPlaneShape.cpp"
 							>
 						</File>
 						<File
@@ -741,7 +1029,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btStridingMeshInterface.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btStridingMeshInterface.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.cpp"
 							>
 						</File>
 						<File
@@ -749,7 +1045,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTetrahedronShape.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTetrahedronShape.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTriangleBuffer.cpp"
 							>
 						</File>
 						<File
@@ -757,11 +1061,23 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTriangleCallback.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTriangleCallback.h"
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.cpp"
 							>
 						</File>
 						<File
@@ -773,7 +1089,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTriangleMesh.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTriangleMesh.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btTriangleMeshShape.cpp"
 							>
 						</File>
 						<File
@@ -785,7 +1109,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btTriangleShapeEx.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\btTriangleShapeEx.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionShapes\btUniformScalingShape.cpp"
 							>
 						</File>
 						<File
@@ -793,7 +1125,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btUnionFind.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\btUnionFind.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.cpp"
 							>
 						</File>
 						<File
@@ -817,11 +1157,19 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\gim_box_set.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\gim_box_set.h"
 							>
 						</File>
 						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\gim_clip_polygon.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\gim_contact.cpp"
 							>
 						</File>
 						<File
@@ -849,6 +1197,10 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\gim_memory.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\gim_memory.h"
 							>
 						</File>
@@ -857,7 +1209,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\gim_tri_collision.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\Gimpact\gim_tri_collision.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp"
 							>
 						</File>
 						<File
@@ -877,11 +1237,19 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btConeTwistConstraint.h"
 							>
 						</File>
 						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btConstraintSolver.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btContactConstraint.cpp"
 							>
 						</File>
 						<File
@@ -893,7 +1261,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Dynamics\btContinuousDynamicsWorld.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Dynamics\btContinuousDynamicsWorld.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp"
 							>
 						</File>
 						<File
@@ -905,7 +1281,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp"
 							>
 						</File>
 						<File
@@ -913,7 +1297,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btHinge2Constraint.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp"
 							>
 						</File>
 						<File
@@ -925,7 +1317,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Character\btKinematicCharacterController.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Character\btKinematicCharacterController.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp"
 							>
 						</File>
 						<File
@@ -933,7 +1333,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Vehicle\btRaycastVehicle.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Vehicle\btRaycastVehicle.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Dynamics\btRigidBody.cpp"
 							>
 						</File>
 						<File
@@ -941,7 +1349,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp"
 							>
 						</File>
 						<File
@@ -949,7 +1365,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btSliderConstraint.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp"
 							>
 						</File>
 						<File
@@ -965,7 +1389,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btTypedConstraint.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp"
 							>
 						</File>
 						<File
@@ -977,7 +1409,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Vehicle\btWheelInfo.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Vehicle\btWheelInfo.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletDynamics\Dynamics\Bullet-C-API.cpp"
 							>
 						</File>
 					</Filter>
@@ -989,7 +1429,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\boxBoxDistance.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\boxBoxDistance.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\btGpu3DGridBroadphase.cpp"
 							>
 						</File>
 						<File
@@ -1021,7 +1469,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\btParallelConstraintSolver.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\btParallelConstraintSolver.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\CPU\btSoftBodySolver_CPU.cpp"
 							>
 						</File>
 						<File
@@ -1029,59 +1485,11 @@
 							>
 						</File>
 						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\DX11\btSoftBodySolver_DX11.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\DX11\btSoftBodySolver_DX11SIMDAware.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\btSoftBodySolver_OpenCL.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\DX11\btSoftBodySolverBuffer_DX11.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\btSoftBodySolverBuffer_OpenCL.h"
-							>
-						</File>
-						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\CPU\btSoftBodySolverData.h"
 							>
 						</File>
 						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\DX11\btSoftBodySolverLinkData_DX11.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\DX11\btSoftBodySolverLinkData_DX11SIMDAware.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\btSoftBodySolverLinkData_OpenCL.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\DX11\btSoftBodySolverTriangleData_DX11.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\btSoftBodySolverTriangleData_OpenCL.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\DX11\btSoftBodySolverVertexBuffer_DX11.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\DX11\btSoftBodySolverVertexData_DX11.h"
-							>
-						</File>
-						<File
-							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\btSoftBodySolverVertexData_OpenCL.h"
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\btThreadSupportInterface.cpp"
 							>
 						</File>
 						<File
@@ -1093,7 +1501,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\MiniCL\MiniCLTaskWrap.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\PlatformDefinitions.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\PosixThreadSupport.cpp"
 							>
 						</File>
 						<File
@@ -1105,7 +1521,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SequentialThreadSupport.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SequentialThreadSupport.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuCollisionObjectWrapper.cpp"
 							>
 						</File>
 						<File
@@ -1113,7 +1537,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuCollisionShapes.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuCollisionShapes.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuCollisionTaskProcess.cpp"
 							>
 						</File>
 						<File
@@ -1121,7 +1553,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuContactManifoldCollisionAlgorithm.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuContactManifoldCollisionAlgorithm.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuContactResult.cpp"
 							>
 						</File>
 						<File
@@ -1137,7 +1577,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuFakeDma.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuFakeDma.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuGatheringCollisionDispatcher.cpp"
 							>
 						</File>
 						<File
@@ -1145,7 +1593,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuGatheringCollisionTask.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuGatheringCollisionTask.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuLibspe2Support.cpp"
 							>
 						</File>
 						<File
@@ -1157,6 +1613,10 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuMinkowskiPenetrationDepthSolver.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuMinkowskiPenetrationDepthSolver.h"
 							>
 						</File>
@@ -1165,7 +1625,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuSampleTask\SpuSampleTask.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuSampleTask\SpuSampleTask.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\SpuSampleTaskProcess.cpp"
 							>
 						</File>
 						<File
@@ -1189,6 +1657,10 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\Win32ThreadSupport.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletMultiThreaded\Win32ThreadSupport.h"
 							>
 						</File>
@@ -1197,7 +1669,15 @@
 						Name="BulletSoftBody"
 						>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btDefaultSoftBodySolver.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btDefaultSoftBodySolver.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftBody.cpp"
 							>
 						</File>
 						<File
@@ -1205,7 +1685,15 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftBodyConcaveCollisionAlgorithm.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftBodyConcaveCollisionAlgorithm.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftBodyHelpers.cpp"
 							>
 						</File>
 						<File
@@ -1214,6 +1702,10 @@
 						</File>
 						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftBodyInternals.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftBodyRigidBodyCollisionConfiguration.cpp"
 							>
 						</File>
 						<File
@@ -1229,11 +1721,23 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftRigidCollisionAlgorithm.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftRigidCollisionAlgorithm.h"
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftRigidDynamicsWorld.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftRigidDynamicsWorld.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\BulletSoftBody\btSoftSoftCollisionAlgorithm.cpp"
 							>
 						</File>
 						<File
@@ -1253,6 +1757,10 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btAlignedAllocator.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btAlignedAllocator.h"
 							>
 						</File>
@@ -1261,11 +1769,19 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btConvexHull.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btConvexHull.h"
 							>
 						</File>
 						<File
 							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btDefaultMotionState.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btGeometryUtil.cpp"
 							>
 						</File>
 						<File
@@ -1309,6 +1825,10 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btQuickprof.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btQuickprof.h"
 							>
 						</File>
@@ -1318,6 +1838,10 @@
 						</File>
 						<File
 							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btScalar.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\LinearMath\btSerializer.cpp"
 							>
 						</File>
 						<File
@@ -1361,7 +1885,19 @@
 							>
 						</File>
 						<File
+							RelativePath="..\..\source\bheaders\Bullet\MiniCL\MiniCL.cpp"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\MiniCL\MiniCLTask\MiniCLTask.cpp"
+							>
+						</File>
+						<File
 							RelativePath="..\..\source\bheaders\Bullet\MiniCL\MiniCLTask\MiniCLTask.h"
+							>
+						</File>
+						<File
+							RelativePath="..\..\source\bheaders\Bullet\MiniCL\MiniCLTaskScheduler.cpp"
 							>
 						</File>
 						<File

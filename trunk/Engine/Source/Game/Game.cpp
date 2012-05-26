@@ -92,6 +92,9 @@ Game::Game()
 #ifdef BOX2D
 	m_my2DPhysicsWorld=NULL;
 #endif
+#ifdef IRRBULLET
+	m_IrrBulletPhysicsWorld=NULL;
+#endif
 
 	if ( Init() )
 	{
@@ -129,6 +132,14 @@ b2World	*Game::get2DPhysicsWorld()
 	return m_my2DPhysicsWorld;
 }
 #endif
+
+#ifdef IRRBULLET
+irrBulletWorld *Game::IrrBulletPhysicsWorld()
+{
+	return m_IrrBulletPhysicsWorld;
+}
+#endif
+
 ////////////////////////////////////////
 
 bool Game::Init()
@@ -193,6 +204,19 @@ bool Game::Init()
 	b2Vec2 gravity ( 0.0f, -GRAVITY );
 	bool doSleep = PHYSICS_2D_DO_SLEEP;
 	m_my2DPhysicsWorld = new b2World ( gravity, doSleep );
+#endif
+#ifdef IRRBULLET
+	////////////////////////////
+	// Create irrBullet World //
+	////////////////////////////
+	m_IrrBulletPhysicsWorld = createIrrBulletWorld ( m_IrrlichtDevice, false, IRRBULLET_SHOW_DEBUG );
+
+	if ( IRRBULLET_SHOW_DEBUG )
+	{
+		m_IrrBulletPhysicsWorld->setDebugMode ( EPDM_DrawAabb |EPDM_DrawContactPoints );
+	}
+
+	m_IrrBulletPhysicsWorld->setGravity ( vector3df ( 0,-GRAVITY,0 ) );
 #endif
 	////////////////////////////////////////
 	m_isGameRun=true;

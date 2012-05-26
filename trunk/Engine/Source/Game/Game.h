@@ -86,7 +86,10 @@ class Game:public IEventReceiver
 #ifdef BOX2D
 		b2World					*m_my2DPhysicsWorld;// Box2d PhysicsWorld
 #endif
-		////////////////////////////////////////
+
+#ifdef IRRBULLET
+		irrBulletWorld					*m_IrrBulletPhysicsWorld;
+#endif
 
 	public:
 		static  Game *getInstance()
@@ -114,6 +117,9 @@ class Game:public IEventReceiver
 		int m_MouseInputY;
 #ifdef BOX2D
 		b2World	*get2DPhysicsWorld();
+#endif
+#ifdef IRRBULLET
+		irrBulletWorld	*IrrBulletPhysicsWorld();
 #endif
 		void	setLanguage ( int language );
 		int		getLanguage();
