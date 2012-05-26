@@ -40,11 +40,17 @@
 #ifndef CORE_GameObjectsManager_H
 #define CORE_GameObjectsManager_H
 
+class BaseGameObjects;
+
 class GameObjectsManager
 {
 	protected:
 		static GameObjectsManager		*m_GameObjectsManager;
 		GameObjectsManager();
+
+	private:
+		typedef std::vector<BaseGameObjects *>	GameObjectsList;
+		GameObjectsList			m_gameObjectsList;
 
 	public:
 		static  GameObjectsManager *getInstance()
@@ -56,6 +62,28 @@ class GameObjectsManager
 
 			return m_GameObjectsManager;
 		}
+
+		//API
+		template <typename T>
+		bool addGameObject ( T *gameObject )
+		{
+			m_gameObjectsList.push_back ( ( BaseGameObjects * ) gameObject );
+			return true;
+		};
+
+		template <typename T>
+		bool deleteGameObject ( T *gameObject )
+		{
+			//m_gameObjectsList.push_back ( (BaseGameObjects *)gameObject );
+			return true;
+		};
+
+		template <typename T>
+		T  *findGameObjectByName ( const char *name )
+		{
+			return 0;
+		};
+
 };
 
 #endif // CORE_GameObjectsManager_H

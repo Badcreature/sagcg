@@ -82,9 +82,9 @@ void GSMainMenu::ctor	( const StateMachine *sm )
 	m_isEventManager->attach ( Events::GAME_SWF_EVENT, this );
 	m_UIObject=m_isGame->getUIManager()->CreateUIObject ( "data/swf/GSMainMenu.swf" );
 	m_UIObject->SetString ( "_root.textbutton1.text", StringManager::getInstance()->getTextByID ( L"NEW_GAME" ) );
-	//m_UIObject->SetString ( "_root.textbutton2.text", StringManager::getInstance()->getTextByID ( L"LOADING" ) );
-	//m_UIObject->SetString ( "_root.textbutton3.text", StringManager::getInstance()->getTextByID ( L"CREDITS" ) );
-	//m_UIObject->SetString ( "_root.textbutton4.text", StringManager::getInstance()->getTextByID ( L"GAME_INFOS" ) );
+	m_UIObject->SetString ( "_root.textbutton2.text", StringManager::getInstance()->getTextByID ( L"LOADING" ) );
+	m_UIObject->SetString ( "_root.textbutton3.text", StringManager::getInstance()->getTextByID ( L"CREDITS" ) );
+	m_UIObject->SetString ( "_root.textbutton4.text", StringManager::getInstance()->getTextByID ( L"GAME_INFOS" ) );
 }
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

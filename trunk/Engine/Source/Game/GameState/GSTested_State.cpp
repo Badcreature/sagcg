@@ -37,6 +37,8 @@
 #include "Managers/UIManager/UIObject.h"
 #include "GSTested_State.h"
 #include "Game/tool/CUnrealMeshFileLoader.h"
+#include "Game/tool/OpenOfficeContextLoader.h"
+#include "IReadFile.h"
 //class SSkinnedMesh;
 /*
 class Shader1 : public video::IShaderConstantSetCallBack
@@ -153,7 +155,7 @@ void GSTested_State::ctor	( const StateMachine *sm )
 	ISceneNode *Node = m_isGame->getSceneManager()->addCubeSceneNode ( 1.0 );
 	Node->setScale ( vector3df ( 700,3,700 ) ); // 400, 3, 400
 	Node->setPosition ( vector3df ( 0,150,-400 ) );
-		//Unrealnode->setPosition ( core::vector3df ( 0,300,-400 ) );
+	//Unrealnode->setPosition ( core::vector3df ( 0,300,-400 ) );
 	Node->setMaterialFlag ( video::EMF_LIGHTING, false );
 	Node->setMaterialTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/crazysky/blue.jpg" ) );
 	ICollisionShape *shape = new IBoxShape ( Node, 0, false );
@@ -168,16 +170,17 @@ void GSTested_State::ctor	( const StateMachine *sm )
 		for ( u32 i=0; i < rows; i++ )
 		{
 			irr::scene::ISceneNode *Node = m_isGame->getSceneManager()->addCubeSceneNode ( 1.0f );
-			Node->setScale ( vector3df ( rand()%30+1,rand()%30+1,rand()%30+1 ) );
+			Node->setScale ( vector3df ( rand() %30+1,rand() %30+1,rand() %30+1 ) );
 			Node->setPosition ( vector3df ( 30*j, 150+30*i+3, -400 ) );
 			Node->setMaterialFlag ( irr::video::EMF_LIGHTING, false );
 			Node->setMaterialTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/crazysky/granitestone.jpg" ) );
-			ICollisionShape *shape = new IBoxShape ( Node, 30, false );
+			ICollisionShape *shape = new IBoxShape ( Node, 300 );
 			IRigidBody *body;
 			body = m_isGame->IrrBulletPhysicsWorld()->addRigidBody ( shape );
 		}
 	}
 
+	//m_isGame->IrrBulletPhysicsWorld()->setGravity ( vector3df ( 0,-GRAVITY*3,0 ) );
 	//////////////////////////////////////////////
 	renderSkyTexture=m_isGame->getVideoDriver()->addRenderTargetTexture ( core::dimension2d< u32 > ( 512,512 ), "RTT1" );
 	scene::ISceneNode *skySceneNode=m_isGame->getSceneManager()->addSkyBoxSceneNode (
@@ -279,6 +282,35 @@ void GSTested_State::ctor	( const StateMachine *sm )
 
 	////////////////////
 	m_isGame->getSceneManager()->setActiveCamera ( camera );
+	////////////////////////////////
+	/*
+	m_isGame->getIrrlichtDevice()->getFileSystem()->addZipFileArchive ( "data/text/localization.ods" );
+	io::IReadFile* file = m_isGame->getIrrlichtDevice()->getFileSystem()->createAndOpenFile("content.xml");
+	if (!file)
+	{
+	printf("Could not load content.xml");
+	}
+	else
+	{
+		wchar_t *filebuffer = (wchar_t*) malloc (sizeof(wchar_t)*file->getSize());
+		memset(filebuffer,' ',(sizeof(wchar_t)*file->getSize()));
+		file->seek(0);
+		file->read(filebuffer, 1+file->getSize());
+
+		FILE * pFile;
+		pFile = fopen ( "myfile.bin" , "wb" );
+		fwrite (filebuffer , 1 , 1+file->getSize() , pFile );
+
+	}
+	*/
+	OpenOfficeContextLoader *odsfile = new OpenOfficeContextLoader ( m_isGame->getIrrlichtDevice(),"data/text/localization.ods","content.xml" );
+	odsfile->writeOpenOfficeDocumentTextToFile ( "data/text/test.xml" );
+	wchar_t *filebuffer = odsfile->getOpenOfficeDocumentText();
+	FILE *pFile;
+	pFile = fopen ( "data/text/myfile.bin" , "wb" );
+	fwrite ( filebuffer , 1 , 1+odsfile->getFileSizeOpenOfficeDocumentText() , pFile );
+	fclose ( pFile );
+	////////////////////////////////
 }
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
