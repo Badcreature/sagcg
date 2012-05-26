@@ -52,7 +52,7 @@
 
 // Enable Bullet engine
 #define IRRBULLET
-#define IRRBULLET_SHOW_DEBUG true
+#define IRRBULLET_SHOW_DEBUG false
 
 // Enable GameSWF engine
 #define GAMESWF

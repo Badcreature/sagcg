@@ -303,6 +303,10 @@
 				Name="GameObjectsManager"
 				>
 				<File
+					RelativePath="..\..\Source\Managers\GameObjectsManager\BaseGameObjects.h"
+					>
+				</File>
+				<File
 					RelativePath="..\..\Source\Managers\GameObjectsManager\GameObjectsManager.cpp"
 					>
 				</File>
@@ -484,6 +488,14 @@
 				</File>
 				<File
 					RelativePath="..\..\Source\Game\tool\CUnrealMeshFileLoader.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Source\Game\tool\OpenOfficeContextLoader.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Source\Game\tool\OpenOfficeContextLoader.h"
 					>
 				</File>
 			</Filter>
