@@ -34,12 +34,7 @@
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ifndef GameObjects_H
 #define GameObjects_H
-
-#include "GOLevel.h"
-#include "GOCrazySky.h"
-#include "GOCharacter.h"
-#include "GOHUD.h"
-#include "GOGameCamera.h"
 #include "Managers/GameObjectsManager/GameObjectsManager.h
+#include "GOCharacter.h"
 
 #endif // GameObjects_H

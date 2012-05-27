@@ -99,6 +99,8 @@ typedef std::list< cUIObject * >			tUIObjectList;
 #include "StringManager.h"
 #include "Managers/UIManager/UIManager.h"
 #include "Managers/GameObjectsManager/GameObjectsManager.h"
+#include "Managers/GameObjectsManager/BaseGameObjects.h"
+
 //
 #include "Game/Loading.h"
 #include "Game/GameEvents/EvIrrlichtEvents.h"
