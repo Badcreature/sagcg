@@ -37,8 +37,8 @@
 #include "Managers/UIManager/UIObject.h"
 #include "GSTested_State.h"
 #include "Game/tool/CUnrealMeshFileLoader.h"
-#include "Game/tool/OpenOfficeContextLoader.h"
-#include "IReadFile.h"
+//#include "Game/tool/OpenOfficeContextLoader.h"
+//#include "IReadFile.h"
 //class SSkinnedMesh;
 /*
 class Shader1 : public video::IShaderConstantSetCallBack
@@ -303,6 +303,7 @@ void GSTested_State::ctor	( const StateMachine *sm )
 
 	}
 	*/
+	/*
 	OpenOfficeContextLoader *odsfile = new OpenOfficeContextLoader ( m_isGame->getIrrlichtDevice(),"data/text/localization.ods","content.xml" );
 	odsfile->writeOpenOfficeDocumentTextToFile ( "data/text/test.xml" );
 	wchar_t *filebuffer = odsfile->getOpenOfficeDocumentText();
@@ -310,6 +311,7 @@ void GSTested_State::ctor	( const StateMachine *sm )
 	pFile = fopen ( "data/text/myfile.bin" , "wb" );
 	fwrite ( filebuffer , 1 , 1+odsfile->getFileSizeOpenOfficeDocumentText() , pFile );
 	fclose ( pFile );
+	*/
 	////////////////////////////////
 }
 

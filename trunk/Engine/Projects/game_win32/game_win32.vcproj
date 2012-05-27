@@ -270,6 +270,50 @@
 					RelativePath="..\..\Source\Managers\StringManager\StringManager.h"
 					>
 				</File>
+				<Filter
+					Name="spreadsheets"
+					>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\OpenOfficeContextLoader.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\OpenOfficeContextLoader.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\SpreadSheetsCell.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\SpreadSheetsCell.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\SpreadSheetsColumn.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\SpreadSheetsColumn.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\SpreadSheetsCore.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\SpreadSheetsCore.h"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\SpreadSheetsList.cpp"
+						>
+					</File>
+					<File
+						RelativePath="..\..\Source\Managers\StringManager\spreadsheets\SpreadSheetsList.h"
+						>
+					</File>
+				</Filter>
 			</Filter>
 			<Filter
 				Name="UIManager"
@@ -438,38 +482,6 @@
 					RelativePath="..\..\Source\Game\Objects\GOCharacter.h"
 					>
 				</File>
-				<File
-					RelativePath="..\..\Source\Game\Objects\GOCrazySky.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\Source\Game\Objects\GOCrazySky.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\Source\Game\Objects\GOGameCamera.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\Source\Game\Objects\GOGameCamera.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\Source\Game\Objects\GOHUD.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\Source\Game\Objects\GOHUD.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\Source\Game\Objects\GOLevel.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\Source\Game\Objects\GOLevel.h"
-					>
-				</File>
 			</Filter>
 			<Filter
 				Name="tool"
@@ -488,14 +500,6 @@
 				</File>
 				<File
 					RelativePath="..\..\Source\Game\tool\CUnrealMeshFileLoader.h"
-					>
-				</File>
-				<File
-					RelativePath="..\..\Source\Game\tool\OpenOfficeContextLoader.cpp"
-					>
-				</File>
-				<File
-					RelativePath="..\..\Source\Game\tool\OpenOfficeContextLoader.h"
 					>
 				</File>
 			</Filter>
