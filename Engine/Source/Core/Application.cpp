@@ -91,7 +91,7 @@ bool Application::Update()
 
 		if ( m_isGame->IrrBulletPhysicsWorld() )
 		{
-			m_isGame->IrrBulletPhysicsWorld()->stepSimulation ( m_dt, 1, 1.0f/irr::f64 ( m_dt ) );
+			m_isGame->IrrBulletPhysicsWorld()->stepSimulation ( m_dt, 1, 1.0f/30.f );
 		}
 
 #endif

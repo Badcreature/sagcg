@@ -69,11 +69,11 @@ bool cUIObject::Load ( const char *identifier )
 }
 
 // ** cUIObject::SetMouseState
-void cUIObject::SetMouseState ( int x, int y, bool pressed )
+void cUIObject::SetMouseState ( int *x, int *y, int countXY , bool *pressed )
 {
 	if ( root )
 	{
-		root->notify_mouse_state ( x, y, pressed ? 1 : 0 );
+		root->notify_mouse_state ( x, y, countXY, pressed );
 	}
 }
 

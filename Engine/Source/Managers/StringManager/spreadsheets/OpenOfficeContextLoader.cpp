@@ -36,7 +36,9 @@ OpenOfficeContextLoader::OpenOfficeContextLoader ( IrrlichtDevice *irrlichtdevic
 	m_filebuffer = 0;
 	m_Filesize=0;
 	m_Buffersize=0;
-	irrlichtdevice->getFileSystem()->addZipFileArchive ( OpenOfficeDocument );
+	//addFileArchive(filename, ignoreCase, ignorePaths, EFAT_ZIP)
+	//irrlichtdevice->getFileSystem()->addZipFileArchive ( OpenOfficeDocument, true,true,EFAT_ZIP);
+	irrlichtdevice->getFileSystem()->addFileArchive ( OpenOfficeDocument, true,true,EFAT_ZIP );
 
 	if ( contextfile )
 	{

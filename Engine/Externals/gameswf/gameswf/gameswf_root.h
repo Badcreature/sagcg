@@ -65,7 +65,11 @@ namespace gameswf
 		float		m_pixel_scale;
 
 		rgba		m_background_color;
-		int			m_mouse_x, m_mouse_y, m_mouse_buttons;
+		int			*m_mouse_Touch_x;
+		int			*m_mouse_Touch_y;
+		bool		*m_mouse_Touch_buttons;
+		int			*m_mouse_Touch_event;
+		int			m_max_mouse_Touch;
 		void		*m_userdata;
 		character::drag_state	m_drag_state;	// @@ fold this into m_mouse_button_state?
 		mouse_button_state m_mouse_button_state;
@@ -91,7 +95,7 @@ namespace gameswf
 		void	set_root_movie ( character *root_movie );
 
 		exported_module void	set_display_viewport ( int x0, int y0, int w, int h );
-		exported_module void	notify_mouse_state ( int x, int y, int buttons );
+		exported_module void	notify_mouse_state ( int *x, int *y, int countXY , bool *buttons );
 		virtual void	get_mouse_state ( int *x, int *y, int *buttons );
 		exported_module character	*get_root_movie() const;
 

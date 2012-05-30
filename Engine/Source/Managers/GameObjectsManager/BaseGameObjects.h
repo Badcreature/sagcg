@@ -40,7 +40,7 @@ class BaseGameObjects
 		{
 			return "BaseGameObject";
 		}
-		
+
 
 
 };

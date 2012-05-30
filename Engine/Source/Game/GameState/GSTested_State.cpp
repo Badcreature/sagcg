@@ -153,27 +153,44 @@ void GSTested_State::ctor	( const StateMachine *sm )
 	*/
 	////////////////////////////////////////
 	ISceneNode *Node = m_isGame->getSceneManager()->addCubeSceneNode ( 1.0 );
-	Node->setScale ( vector3df ( 700,3,700 ) ); // 400, 3, 400
+	Node->setScale ( vector3df ( 8400,3,8400 ) ); // 400, 3, 400
 	Node->setPosition ( vector3df ( 0,150,-400 ) );
 	//Unrealnode->setPosition ( core::vector3df ( 0,300,-400 ) );
 	Node->setMaterialFlag ( video::EMF_LIGHTING, false );
 	Node->setMaterialTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/crazysky/blue.jpg" ) );
 	ICollisionShape *shape = new IBoxShape ( Node, 0, false );
-	//shape->setMargin(0.01);
 	IRigidBody *body;
 	body = m_isGame->IrrBulletPhysicsWorld()->addRigidBody ( shape );
-	irr::u32 rows=10;
+	irr::u32 rows=100;
 	irr::u32 columns=10;
+	ITexture *text1=m_isGame->getVideoDriver()->getTexture ( "data/crazysky/granitestone.jpg" );
+	ITexture *text2=m_isGame->getVideoDriver()->getTexture ( "data/crazysky/crazy1.jpg" );
+	ITexture *text3=m_isGame->getVideoDriver()->getTexture ( "data/crazysky/blue.jpg" );
 
 	for ( u32 j=0; j < columns; j++ )
 	{
 		for ( u32 i=0; i < rows; i++ )
 		{
 			irr::scene::ISceneNode *Node = m_isGame->getSceneManager()->addCubeSceneNode ( 1.0f );
-			Node->setScale ( vector3df ( rand() %30+1,rand() %30+1,rand() %30+1 ) );
-			Node->setPosition ( vector3df ( 30*j, 150+30*i+3, -400 ) );
+			Node->setScale ( vector3df ( 20,20,20 ) );
+			Node->setPosition ( vector3df ( 30*j, 150+30*i+3, -300+rand() %200 ) );
 			Node->setMaterialFlag ( irr::video::EMF_LIGHTING, false );
-			Node->setMaterialTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/crazysky/granitestone.jpg" ) );
+
+			switch ( rand() %3 )
+			{
+				case 0:
+					Node->setMaterialTexture ( 0, text1 );
+					break;
+
+				case 1:
+					Node->setMaterialTexture ( 0, text2 );
+					break;
+
+				case 2:
+					Node->setMaterialTexture ( 0, text3 );
+					break;
+			}
+
 			ICollisionShape *shape = new IBoxShape ( Node, 300 );
 			IRigidBody *body;
 			body = m_isGame->IrrBulletPhysicsWorld()->addRigidBody ( shape );

@@ -75,11 +75,11 @@ void cUIManager::Update ( float deltaTime, bool forceRealtimeFramerate )
 	}
 }
 
-void cUIManager::UpdateMouseState ( int cursorX, int cursorY, bool mousePressed )
+void cUIManager::UpdateMouseState ( int *cursorX, int *cursorY, int countXY, bool *mousePressed )
 {
 	for ( tUIObjectList::iterator i = uiObjects.begin(), end = uiObjects.end(); i != end; i++ )
 	{
-		( *i )->SetMouseState ( cursorX, cursorY, mousePressed );
+		( *i )->SetMouseState ( cursorX, cursorY, countXY, mousePressed );
 	}
 }
 
