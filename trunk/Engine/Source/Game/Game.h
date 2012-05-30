@@ -112,9 +112,11 @@ class Game:public IEventReceiver
 		ISceneManager *getSceneManager();
 		IGUIEnvironment	*getGUIEnvironment();
 		cUIManager *getUIManager();
-		bool m_MouseButton;
-		int m_MouseInputX;
-		int m_MouseInputY;
+		bool *m_MouseButtonDown;
+		int *m_MouseX;
+		int *m_MouseY;
+		int m_MouseCount;
+
 #ifdef BOX2D
 		b2World	*get2DPhysicsWorld();
 #endif

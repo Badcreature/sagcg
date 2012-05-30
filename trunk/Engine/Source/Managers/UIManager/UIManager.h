@@ -52,7 +52,7 @@ class cUIManager
 		cUIObject		*CreateUIObject ( const char *identifier );
 		void			ReleaseUIObject ( cUIObject *uiObject );
 		void			Update ( float deltaTime=60, bool forceRealtimeFramerate=true );
-		void            UpdateMouseState ( int cursorX, int cursorY, bool mousePressed=false );
+		void            UpdateMouseState ( int *cursorX, int *cursorY, int countXY, bool *mousePressed );
 		void			Render ( int width, int height, bool background );
 };
 

@@ -59,7 +59,7 @@ class cUIObject
 		bool				GotoAndStop ( const char *label, const char *clip = NULL );
 		void				GotoAndPlay ( int frame, const char *clip = NULL );
 		void				GotoAndStop ( int frame, const char *clip = NULL );
-		void				SetMouseState ( int x, int y, bool pressed );
+		void				SetMouseState ( int *x, int *y, int countXY , bool *pressed );
 
 		void				SetVisible ( bool visible );
 		bool				IsVisible ( void ) const;
@@ -67,7 +67,7 @@ class cUIObject
 		int					GetHeight ( void ) const;
 		SColor				GetBackgroundColor ( void ) const;
 		float				GetFrameRate ( void ) const;
-		cUIText			*GetTextByCaption ( const char *caption );
+		cUIText				*GetTextByCaption ( const char *caption );
 		bool				IsAVM2 ( void ) const;
 
 		// ** C++/Flash Interop

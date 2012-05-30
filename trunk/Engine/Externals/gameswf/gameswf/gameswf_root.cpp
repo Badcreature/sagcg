@@ -40,14 +40,10 @@ namespace gameswf
 		m_viewport_height ( 1 ),
 		m_pixel_scale ( 1.0f ),
 		m_background_color ( 0, 0, 0, 255 ),
-		m_mouse_x ( 0 ),
-		m_mouse_y ( 0 ),
-		m_mouse_buttons ( 0 ),
 		m_userdata ( NULL ),
 		m_on_event_load_called ( false ),
 		m_shift_key_state ( false ),
 		m_current_active_entity ( NULL ),
-
 		// the first time we needs do advance() and
 		// then display() certainly
 		m_time_remainder ( 1.0f ),
@@ -55,6 +51,11 @@ namespace gameswf
 		m_frame_time ( 1.0f ),
 		m_player ( player )
 	{
+		m_mouse_Touch_x=0;
+		m_mouse_Touch_y=0;
+		m_mouse_Touch_buttons=0;
+		m_max_mouse_Touch=0;
+		m_mouse_Touch_event=0;
 		assert ( m_def != NULL );
 		set_display_viewport ( 0, 0, ( int ) m_def->get_width_pixels(), ( int ) m_def->get_height_pixels() );
 		m_frame_time = 1.0f / get_frame_rate();
@@ -63,6 +64,30 @@ namespace gameswf
 
 	root::~root()
 	{
+		if ( m_mouse_Touch_buttons )
+		{
+			delete m_mouse_Touch_buttons;
+			m_mouse_Touch_buttons=0;
+		}
+
+		if ( m_mouse_Touch_x )
+		{
+			delete m_mouse_Touch_x;
+			m_mouse_Touch_x=0;
+		}
+
+		if ( m_mouse_Touch_y )
+		{
+			delete m_mouse_Touch_y;
+			m_mouse_Touch_y=0;
+		}
+
+		if ( m_mouse_Touch_event )
+		{
+			delete m_mouse_Touch_event;
+			m_mouse_Touch_event=0;
+		}
+
 		assert ( m_movie != NULL );
 		m_movie = NULL;
 		assert ( m_def != NULL );
@@ -412,29 +437,72 @@ namespace gameswf
 	}
 
 
-	void	root::notify_mouse_state ( int x, int y, int buttons )
+	void	root::notify_mouse_state ( int *x, int *y, int countXY , bool *buttons )
 	// The host app uses this to tell the movie where the
 	// user's mouse pointer is.
 	{
-		bool is_mouse_moved = ( x !=  m_mouse_x ) || ( y != m_mouse_y );
-		if(m_mouse_buttons != buttons)
+		// Init mouse
+		if ( !m_max_mouse_Touch )
 		{
-			if(buttons)
+			if ( countXY>0 )
 			{
-			m_mouse_listener.notify ( event_id::MOUSE_DOWN );
-			}
-			else
-			{
-			m_mouse_listener.notify ( event_id::MOUSE_UP );
+				m_max_mouse_Touch=countXY;
+				m_mouse_Touch_buttons=new bool[m_max_mouse_Touch];
+				//memset(&m_mouse_Touch_buttons,0,m_mouse_Touch_buttons);
+				m_mouse_Touch_x=new int[m_max_mouse_Touch];
+				//memset(&m_mouse_Touch_x,0,m_mouse_Touch_x);
+				m_mouse_Touch_y=new int[m_max_mouse_Touch];
+				//memset(&m_mouse_Touch_y,0,m_mouse_Touch_y);
+				m_mouse_Touch_event=new int[m_max_mouse_Touch];
+				//memset(&m_mouse_Touch_event,0,m_mouse_Touch_event);
 			}
 		}
 
-		m_mouse_x = x;
-		m_mouse_y = y;
-		m_mouse_buttons = buttons;
-
-		if ( is_mouse_moved )
+		else if ( countXY!=m_max_mouse_Touch )
 		{
+			m_max_mouse_Touch=countXY;
+			delete m_mouse_Touch_buttons;
+			m_mouse_Touch_buttons=new bool[m_max_mouse_Touch];
+			//memset(&m_mouse_Touch_buttons,0,m_mouse_Touch_buttons);
+			delete m_mouse_Touch_x;
+			m_mouse_Touch_x=new int[m_max_mouse_Touch];
+			//memset(&m_mouse_Touch_x,0,m_mouse_Touch_x);
+			delete m_mouse_Touch_y;
+			m_mouse_Touch_y=new int[m_max_mouse_Touch];
+			//memset(&m_mouse_Touch_y,0,m_mouse_Touch_y);
+			delete m_mouse_Touch_event;
+			m_mouse_Touch_event=new int[m_max_mouse_Touch];
+			//memset(&m_mouse_Touch_event,0,m_mouse_Touch_event);
+		}
+
+		assert ( m_max_mouse_Touch );
+		assert ( m_mouse_Touch_buttons );
+		assert ( m_mouse_Touch_x );
+		assert ( m_mouse_Touch_y );
+		assert ( m_mouse_Touch_event );
+
+		////////////Mouse logic
+		for ( int i=0 ; i<countXY; i++ )
+		{
+			if ( m_mouse_Touch_buttons[i]!=buttons[i] )
+			{
+				m_mouse_Touch_buttons[i]=buttons[i];
+
+				if ( buttons[i] )
+				{
+					m_mouse_listener.notify ( event_id::MOUSE_DOWN );
+					m_mouse_Touch_event[i]=event_id::MOUSE_DOWN;
+				}
+
+				else
+				{
+					m_mouse_listener.notify ( event_id::MOUSE_UP );
+					m_mouse_Touch_event[i]=event_id::MOUSE_UP;
+				}
+			}
+
+			m_mouse_Touch_x[i]=x[i];
+			m_mouse_Touch_y[i]=y[i];
 			m_mouse_listener.notify ( event_id::MOUSE_MOVE );
 		}
 	}
@@ -446,9 +514,21 @@ namespace gameswf
 		assert ( x );
 		assert ( y );
 		assert ( buttons );
-		*x = m_mouse_x;
-		*y = m_mouse_y;
-		*buttons = m_mouse_buttons;
+
+		if ( m_mouse_Touch_x )
+		{
+			*x = m_mouse_Touch_x[0];
+		}
+
+		if ( m_mouse_Touch_y )
+		{
+			*y = m_mouse_Touch_y[0];
+		}
+
+		if ( m_mouse_Touch_buttons )
+		{
+			*buttons = m_mouse_Touch_buttons[0];
+		}
 	}
 
 	character	*root::get_root_movie() const
@@ -615,10 +695,18 @@ namespace gameswf
 		do_mouse_drag();
 		// Handle the mouse.
 		character *te;
-		m_movie->get_topmost_mouse_entity ( te, PIXELS_TO_TWIPS ( m_mouse_x ), PIXELS_TO_TWIPS ( m_mouse_y ) );
-		m_mouse_button_state.m_topmost_entity = te;
-		m_mouse_button_state.m_mouse_button_state_current = ( m_mouse_buttons & 1 );
-		generate_mouse_button_events ( &m_mouse_button_state );
+
+		if ( m_max_mouse_Touch )
+		{
+			for ( int i=0; i<m_max_mouse_Touch; i++ )
+			{
+				m_movie->get_topmost_mouse_entity ( te, PIXELS_TO_TWIPS ( m_mouse_Touch_x[i] ), PIXELS_TO_TWIPS ( m_mouse_Touch_y[i] ) );
+				m_mouse_button_state.m_topmost_entity = te;
+				m_mouse_button_state.m_mouse_button_state_current = ( m_mouse_Touch_buttons[i] );
+				generate_mouse_button_events ( &m_mouse_button_state );
+			}
+		}
+
 		// advance Action script objects (interval timers, xmlsocket, ...)
 		m_listener.advance ( delta_time );
 		m_time_remainder += delta_time;

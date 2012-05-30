@@ -17,9 +17,9 @@ class GOCharacter : public  BaseGameObjects,  public EEventReceiver
 		{
 			return "GOCharacter";
 		}
-		
+
 		// EReceiver
-		virtual void	onEvent ( const EEvent *ev, const EventManager *evMgr ){};
+		virtual void	onEvent ( const EEvent *ev, const EventManager *evMgr ) {};
 
 };
 

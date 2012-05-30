@@ -86,9 +86,10 @@ Game::Game()
 	m_lastFPS = -1;
 	m_font = 0;
 	m_UIManager=NULL;
-	m_MouseButton=false;
-	m_MouseInputX=0;
-	m_MouseInputY=0;
+	m_MouseButtonDown=0;
+	m_MouseX=0;
+	m_MouseY=0;
+	m_MouseCount=0;
 #ifdef BOX2D
 	m_my2DPhysicsWorld=NULL;
 #endif
@@ -167,6 +168,16 @@ bool Game::Init()
 		return 1;
 	}
 
+	// Init mouse
+	m_MouseButtonDown=new bool[irr::NUMBER_OF_MULTI_TOUCHES];
+	m_MouseX=new int[irr::NUMBER_OF_MULTI_TOUCHES];
+	m_MouseY=new int[irr::NUMBER_OF_MULTI_TOUCHES];
+#ifdef WIN32
+	m_MouseCount=1;
+#else
+	m_MouseCount=irr::NUMBER_OF_MULTI_TOUCHES;
+#endif
+	// ///
 	m_IrrlichtDevice->setWindowCaption ( L"Game Engine Window" );
 	m_VideoDriver = m_IrrlichtDevice->getVideoDriver();
 	m_SceneManager = m_IrrlichtDevice->getSceneManager();
@@ -192,11 +203,6 @@ bool Game::Init()
 	}
 
 	m_font = m_GUIEnvironment->getBuiltInFont();
-	/*if ( m_IrrlichtDevice->getFileSystem()->addZipFileArchive ( "data/map-20kdm2.pk3" ) )
-	{
-		Logs::error ( "addZipFileArchive\n" );
-	}
-	*/
 	////////////////////////////////////////
 	// Box2d engine
 	////////////////////////////////////////
@@ -266,14 +272,15 @@ bool Game::Run()
 
 void Game::UIManagerUpdate ( float deltatime )
 {
-	m_UIManager->UpdateMouseState ( m_MouseInputX, m_MouseInputY, m_MouseButton );
+#ifdef WIN32
+	m_UIManager->UpdateMouseState ( m_MouseX, m_MouseY,m_MouseCount, m_MouseButtonDown );
+#endif // WIN32
 	m_UIManager->Update ( deltatime ,false );
 }
 
 
 void Game::Quit()
 {
-	//delete TouchGamepad::getInstance();
 	m_IrrlichtDevice->drop();
 #ifdef BOX2D
 
@@ -283,7 +290,6 @@ void Game::Quit()
 	}
 
 #endif
-	//m_isGameRun=false;
 }
 
 void	Game::setLanguage ( int language )
@@ -312,31 +318,32 @@ void Game::GameSWFEvent ( const char *command, const char *args )
 bool Game::OnEvent ( const irr::SEvent &IrrlichtEvent )
 {
 	EventManager::getInstance().raise ( EvIrrlichtEvents ( IrrlichtEvent ) );
+#ifdef WIN32
 
 	if ( IrrlichtEvent.EventType == irr::EET_MOUSE_INPUT_EVENT )
 	{
 		switch ( IrrlichtEvent.MouseInput.Event )
 		{
 			case EMIE_LMOUSE_PRESSED_DOWN:
-				m_MouseButton = true;
+				m_MouseButtonDown[0] = true;
 				break;
 
 			case EMIE_LMOUSE_LEFT_UP:
-				m_MouseButton = false;
+				m_MouseButtonDown[0] = false;
 				break;
 
 			case EMIE_RMOUSE_PRESSED_DOWN:
-				m_MouseButton = true;
+				m_MouseButtonDown[0] = true;
 				break;
 
 			case EMIE_RMOUSE_LEFT_UP:
-				m_MouseButton = false;
+				m_MouseButtonDown[0] = false;
 				break;
 
 			case EMIE_MOUSE_MOVED:
-				m_MouseInputX = IrrlichtEvent.MouseInput.X;
-				m_MouseInputY = IrrlichtEvent.MouseInput.Y;
-				m_UIManager->UpdateMouseState ( m_MouseInputX, m_MouseInputY, m_MouseButton );
+				m_MouseX[0] = IrrlichtEvent.MouseInput.X;
+				m_MouseY[0] = IrrlichtEvent.MouseInput.Y;
+				m_UIManager->UpdateMouseState ( m_MouseX, m_MouseY, m_MouseCount, m_MouseButtonDown );
 				break;
 
 			default:
@@ -345,28 +352,34 @@ bool Game::OnEvent ( const irr::SEvent &IrrlichtEvent )
 		}
 	}
 
-	else if ( IrrlichtEvent.EventType == irr::EET_MULTI_TOUCH_EVENT )
+#else
+
+	if ( IrrlichtEvent.EventType == irr::EET_MULTI_TOUCH_EVENT )
 	{
 		u32 cnt = IrrlichtEvent.MultiTouchInput.touchedCount();
 
 		for ( int i=0; i<cnt; i++ )
 		{
-			printf ( "multi touch #%d ... [%d] - (%d,%d)\n", i,
-			         IrrlichtEvent.MultiTouchInput.Event,
-			         IrrlichtEvent.MultiTouchInput.X[i],
-			         IrrlichtEvent.MultiTouchInput.Y[i] );
-
 			if ( IrrlichtEvent.MultiTouchInput.Event==EMTIE_PRESSED_DOWN || IrrlichtEvent.MultiTouchInput.Event==EMTIE_MOVED )
 			{
-				m_UIManager->UpdateMouseState ( IrrlichtEvent.MultiTouchInput.X[i], IrrlichtEvent.MultiTouchInput.Y[i], true );
+				m_MouseX[i]=IrrlichtEvent.MultiTouchInput.X[i];
+				m_MouseY[i]=IrrlichtEvent.MultiTouchInput.Y[i];
+				m_MouseCount=cnt;
+				m_MouseButtonDown[i]=true;
 			}
 
-			else if ( IrrlichtEvent.MultiTouchInput.Event==EMTIE_LEFT_UP )
+			else
 			{
-				m_UIManager->UpdateMouseState ( IrrlichtEvent.MultiTouchInput.X[i], IrrlichtEvent.MultiTouchInput.Y[i], false );
+				m_MouseX[i]=IrrlichtEvent.MultiTouchInput.X[i];
+				m_MouseY[i]=IrrlichtEvent.MultiTouchInput.Y[i];
+				m_MouseCount=cnt;
+				m_MouseButtonDown[i]=false;
 			}
+
+			m_UIManager->UpdateMouseState ( m_MouseX, m_MouseY, m_MouseCount, m_MouseButtonDown );
 		}
 	}
 
+#endif // WIN32
 	return false;
 };
