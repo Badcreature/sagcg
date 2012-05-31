@@ -174,7 +174,7 @@ inline bool	edges_intersect_sub ( const array<poly_vert<coord_t> >& sorted_verts
 {
 	// Need to specialize this on coord_t, in order to get it
 	// correct and avoid overflow.
-	compiler_assert ( 0 );
+	//compiler_assert ( 0 );
 	return -1;
 }
 
