@@ -40,6 +40,9 @@
 #pragma warning(disable: 4018) //'<' : signed/unsigned mismatch
 #pragma warning(disable: 4244) //'argument' : conversion from 'int' to 'float', possible loss of data
 #pragma warning(disable: 4101) //'' : unreferenced local variable
+#pragma warning(disable: 4566) //'' : character represented by universal-character-name cannot be represented in the current code page (1251)
+#pragma warning(disable: 4005) //warning C: macro redefinition
+
 
 // Fedaultd and Setting
 #include "Commons.h"
@@ -99,6 +102,7 @@ typedef std::list< cUIObject * >			tUIObjectList;
 #include "StringManager.h"
 #include "Managers/UIManager/UIManager.h"
 #include "Managers/GameObjectsManager/GameObjectsManager.h"
+#include "Managers/ScriptManager/ScriptManager.h"
 #include "Managers/GameObjectsManager/BaseGameObjects.h"
 
 //

@@ -32,9 +32,40 @@
 //  gameswf for further informations.
 //
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#ifndef GameObjects_H
-#define GameObjects_H
-//#include "Managers/GameObjectsManager/GameObjectsManager.h
-#include "GOCharacter.h"
+// ScriptManager
+//
+//
+//
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#ifndef CORE_ScriptManager_H
+#define CORE_ScriptManager_H
 
-#endif // GameObjects_H
+class ScriptManager: public EEventReceiver
+{
+	private:
+		// Glodal
+		StateMachine 		*m_isStateMachine;
+		EventManager 		*m_isEventManager;
+		Game 				*m_isGame;
+
+	protected:
+		static ScriptManager		*m_ScriptManager;
+		ScriptManager();
+		~ScriptManager();
+
+	public:
+		static  ScriptManager *getInstance()
+		{
+			if ( !m_ScriptManager )
+			{
+				m_ScriptManager = new ScriptManager();
+			}
+
+			return m_ScriptManager;
+		}
+		void	onEvent ( const EEvent *ev, const EventManager *evMgr );
+		void	Update ( unsigned long dt );
+
+};
+
+#endif // CORE_ScriptManager_H

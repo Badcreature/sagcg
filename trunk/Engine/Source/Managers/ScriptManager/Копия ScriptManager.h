@@ -32,9 +32,32 @@
 //  gameswf for further informations.
 //
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#ifndef GameObjects_H
-#define GameObjects_H
-//#include "Managers/GameObjectsManager/GameObjectsManager.h
-#include "GOCharacter.h"
+// ScriptManager
+//
+//
+//
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#ifndef CORE_ScriptManager_H
+#define CORE_ScriptManager_H
 
-#endif // GameObjects_H
+class ScriptManager
+{
+	protected:
+		static ScriptManager		*m_ScriptManager;
+		ScriptManager();
+
+	public:
+		static  ScriptManager *getInstance()
+		{
+			if ( !m_ScriptManager )
+			{
+				m_ScriptManager = new ScriptManager();
+			}
+
+			return m_ScriptManager;
+		}
+
+
+};
+
+#endif // CORE_ScriptManager_H

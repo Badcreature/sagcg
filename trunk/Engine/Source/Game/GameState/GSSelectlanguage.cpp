@@ -193,81 +193,82 @@ void	GSSelectlanguage::onEvent ( const EEvent *ev, const EventManager *evMgr )
 			break;
 
 		case Events::GAME_SWF_EVENT:
-			Logs::info ( "GAME_SWF_EVENT onEvent\n" );
-			const char *CommandSWF=static_cast<const EvGameSWFEvent *> ( ev )->command;
-			const char *ArgsSWF=static_cast<const EvGameSWFEvent *> ( ev )->args;
-
-			if ( strcmp ( "LANG", CommandSWF ) ==0 )
 			{
-				if ( strcmp ( "EN", ArgsSWF ) ==0 )
-				{
-					m_isGame->setLanguage ( LANGUAGE_EN );//0
-					Logs::info ( "setLanguage ( LANGUAGE_EN )\n" );
-				}
+				Logs::info ( "GAME_SWF_EVENT onEvent\n" );
+				const char *CommandSWF=static_cast<const EvGameSWFEvent *> ( ev )->command;
+				const char *ArgsSWF=static_cast<const EvGameSWFEvent *> ( ev )->args;
 
-				else if ( strcmp ( "FR", ArgsSWF ) ==0 )
+				if ( strcmp ( "LANG", CommandSWF ) ==0 )
 				{
-					m_isGame->setLanguage ( LANGUAGE_FR );//1
-					Logs::info ( "setLanguage ( LANGUAGE_FR )\n" );
-				}
+					if ( strcmp ( "EN", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_EN );//0
+						Logs::info ( "setLanguage ( LANGUAGE_EN )\n" );
+					}
 
-				else if ( strcmp ( "DE", ArgsSWF ) ==0 )
-				{
-					m_isGame->setLanguage ( LANGUAGE_DE );//2
-					Logs::info ( "setLanguage ( LANGUAGE_DE )\n" );
-				}
+					else if ( strcmp ( "FR", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_FR );//1
+						Logs::info ( "setLanguage ( LANGUAGE_FR )\n" );
+					}
 
-				else if ( strcmp ( "SP", ArgsSWF ) ==0 )
-				{
-					m_isGame->setLanguage ( LANGUAGE_SP );//3
-					Logs::info ( "setLanguage ( LANGUAGE_SP )\n" );
-				}
+					else if ( strcmp ( "DE", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_DE );//2
+						Logs::info ( "setLanguage ( LANGUAGE_DE )\n" );
+					}
 
-				else if ( strcmp ( "IT", ArgsSWF ) ==0 )
-				{
-					m_isGame->setLanguage ( LANGUAGE_IT );//4
-					Logs::info ( "setLanguage ( LANGUAGE_IT )\n" );
-				}
+					else if ( strcmp ( "SP", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_SP );//3
+						Logs::info ( "setLanguage ( LANGUAGE_SP )\n" );
+					}
 
-				else if ( strcmp ( "JP", ArgsSWF ) ==0 )
-				{
-					m_isGame->setLanguage ( LANGUAGE_JP );//5
-					Logs::info ( "setLanguage ( LANGUAGE_JP )\n" );
-				}
+					else if ( strcmp ( "IT", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_IT );//4
+						Logs::info ( "setLanguage ( LANGUAGE_IT )\n" );
+					}
 
-				else if ( strcmp ( "RU", ArgsSWF ) ==0 )
-				{
-					m_isGame->setLanguage ( LANGUAGE_RU );//6
-					Logs::info ( "setLanguage ( LANGUAGE_RU )\n" );
-				}
+					else if ( strcmp ( "JP", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_JP );//5
+						Logs::info ( "setLanguage ( LANGUAGE_JP )\n" );
+					}
 
-				else if ( strcmp ( "KO", ArgsSWF ) ==0 )
-				{
-					m_isGame->setLanguage ( LANGUAGE_KO );//7
-					Logs::info ( "setLanguage ( LANGUAGE_KO )\n" );
-				}
+					else if ( strcmp ( "RU", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_RU );//6
+						Logs::info ( "setLanguage ( LANGUAGE_RU )\n" );
+					}
 
-				else if ( strcmp ( "CN", ArgsSWF ) ==0 )
-				{
-					m_isGame->setLanguage ( LANGUAGE_CN );//8
-					Logs::info ( "setLanguage ( LANGUAGE_CN )\n" );
-				}
+					else if ( strcmp ( "KO", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_KO );//7
+						Logs::info ( "setLanguage ( LANGUAGE_KO )\n" );
+					}
 
-				else if ( strcmp ( "BR", ArgsSWF ) ==0 )
-				{
-					m_isGame->setLanguage ( LANGUAGE_BR );//9
-					Logs::info ( "setLanguage ( LANGUAGE_BR )\n" );
-				}
+					else if ( strcmp ( "CN", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_CN );//8
+						Logs::info ( "setLanguage ( LANGUAGE_CN )\n" );
+					}
 
-				else
-				{
-					m_isGame->setLanguage ( LANGUAGE_EN );//0
-					Logs::info ( "setLanguage ( LANGUAGE_UNKNOWN )\n" );
-				}
+					else if ( strcmp ( "BR", ArgsSWF ) ==0 )
+					{
+						m_isGame->setLanguage ( LANGUAGE_BR );//9
+						Logs::info ( "setLanguage ( LANGUAGE_BR )\n" );
+					}
 
-				m_exitState=true;
+					else
+					{
+						m_isGame->setLanguage ( LANGUAGE_EN );//0
+						Logs::info ( "setLanguage ( LANGUAGE_UNKNOWN )\n" );
+					}
+
+					m_exitState=true;
+				}
 			}
-
 			break;
 	}
 }

@@ -83,6 +83,7 @@ class Game:public IEventReceiver
 		gui::IGUIFont			*m_font;
 		int						 m_language;
 		cUIManager				*m_UIManager;
+		ScriptManager			*m_ScriptManager;
 #ifdef BOX2D
 		b2World					*m_my2DPhysicsWorld;// Box2d PhysicsWorld
 #endif
@@ -112,6 +113,7 @@ class Game:public IEventReceiver
 		ISceneManager *getSceneManager();
 		IGUIEnvironment	*getGUIEnvironment();
 		cUIManager *getUIManager();
+		ScriptManager	*Game::getScriptManager();
 		bool *m_MouseButtonDown;
 		int *m_MouseX;
 		int *m_MouseY;

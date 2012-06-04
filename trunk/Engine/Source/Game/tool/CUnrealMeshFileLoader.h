@@ -142,6 +142,7 @@ namespace irr
 				{
 					return Mesh->getMesh ( 0,255,-1,-1 );
 				};
+
 				virtual IMesh *getMesh ( s32 frame, s32 detailLevel=255, s32 startFrameLoop=-1, s32 endFrameLoop=-1 )
 				{
 					return Mesh->getMesh ( frame,detailLevel,startFrameLoop,endFrameLoop );
