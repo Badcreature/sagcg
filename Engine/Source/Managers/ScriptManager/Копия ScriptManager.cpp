@@ -32,9 +32,21 @@
 //  gameswf for further informations.
 //
 // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#ifndef GameObjects_H
-#define GameObjects_H
-//#include "Managers/GameObjectsManager/GameObjectsManager.h
-#include "GOCharacter.h"
+// ScriptManager
+//
+//
+//
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#include "StdAfx.h"
+#include "ScriptManager.h"
+#include "localization.h"
+#include "../../Game/Game.h"
 
-#endif // GameObjects_H
+
+
+ScriptManager *ScriptManager :: m_ScriptManager=NULL;
+ScriptManager::ScriptManager()
+{
+}
+
+//

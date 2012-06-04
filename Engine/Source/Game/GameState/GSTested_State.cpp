@@ -37,6 +37,9 @@
 #include "Managers/UIManager/UIObject.h"
 #include "GSTested_State.h"
 #include "Game/tool/CUnrealMeshFileLoader.h"
+#include "Game/Objects/GameObjects.h"
+#include "Game/GameEvents/EvGameCharacterEvent.h"
+class EvGameCharacterEvent;
 //#include "Game/tool/OpenOfficeContextLoader.h"
 //#include "IReadFile.h"
 //class SSkinnedMesh;
@@ -263,40 +266,12 @@ void GSTested_State::ctor	( const StateMachine *sm )
 			//FBXnode->setMaterialFlag(video::EMF_NORMALIZE_NORMALS, true);
 		}
 	*/
+	//////////////////////////
+	GOCharacter *pers = new GOCharacter();
 	////////////////////
-	IAnimatedMesh *Unrealmesh = m_isGame->getSceneManager()->getMesh ( "data/models/UnrealMesh/char_betty.PSK" );
-	IAnimatedMeshSceneNode *Unrealnode = m_isGame->getSceneManager()->addAnimatedMeshSceneNode ( Unrealmesh );
+	/*
 
-	if ( Unrealnode )
-	{
-		Unrealnode->setRotation ( vector3df ( -90,180,0 ) );
-		Unrealnode->getMaterial ( 0 ).setTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/models/UnrealMesh/char_betty_tex.tga" ) );
-		Unrealnode->getMaterial ( 1 ).setTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/models/UnrealMesh/char_betty_tex.tga" ) );
-		Unrealnode->getMaterial ( 2 ).setTexture ( 0, m_isGame->getVideoDriver()->getTexture ( "data/models/UnrealMesh/char_betty_tex.tga" ) );
-		Unrealnode->setMaterialFlag ( EMF_LIGHTING, false );
-		IAnimatedMesh *Unrealanimation = m_isGame->getSceneManager()->getMesh ( "data/models/UnrealMesh/char_betty_anim.PSA" );
-		s32 begin=0, end=550;
-		f32 speed=24;
-		/*
-		test
-		idle
-		jump
-		run
-		walk
-		*/
-		core::stringc SelectAnimation="jump";
-		( ( SSkinnedMesh * ) Unrealanimation )->getFrameLoop ( SelectAnimation , begin, end, speed );
-		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("idle") , begin, end, speed );
-		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("jump") , begin, end, speed );
-		//((SSkinnedMesh*)Unrealanimation)->getFrameLoop( core::stringc("run") , begin, end, speed );
-		( ( ISkinnedMesh * ) Unrealmesh )->useAnimationFrom ( ( ( ISkinnedMesh * ) Unrealanimation ) );
-		Unrealnode->setFrameLoop ( begin, end );
-		Unrealnode->setAnimationSpeed ( speed );
-		Unrealnode->setLoopMode ( true );
-		Unrealnode->setPosition ( core::vector3df ( 0,300,-400 ) );
-		Unrealnode->setRotation ( core::vector3df ( -90,0,0 ) );
-	}
-
+	*/
 	////////////////////
 	m_isGame->getSceneManager()->setActiveCamera ( camera );
 	////////////////////////////////
@@ -509,69 +484,76 @@ void	GSTested_State::onEvent ( const EEvent *ev, const EventManager *evMgr )
 					m_gamepad.x_mouse = IrrlichtEvent.MouseInput.X;
 					m_gamepad.y_mouse = IrrlichtEvent.MouseInput.Y;
 				}
+
+				if ( IrrlichtEvent.EventType == irr::EET_MOUSE_INPUT_EVENT && IrrlichtEvent.MouseInput.Event == irr::EMIE_MOUSE_MOVED )
+				{
+					m_gamepad.x_mouse = IrrlichtEvent.MouseInput.X;
+					m_gamepad.y_mouse = IrrlichtEvent.MouseInput.Y;
+				}
 			}
 			break;
 
 		case Events::GAME_SWF_EVENT:
-			Logs::info ( "GAME_SWF_EVENT onEvent\n" );
-			const char *CommandSWF=static_cast<const EvGameSWFEvent *> ( ev )->command;
-			const char *ArgsSWF=static_cast<const EvGameSWFEvent *> ( ev )->args;
-
-			/*
-			gamepad
-			gamepad_center
-			gamemenu
-			button_action1
-			button_action2
-			//////
-			rollOver
-			rollOut
-			press
-			release
-			dragOut
-			dragOver
-			*/
-			if ( strcmp ( "gamepad", CommandSWF ) ==0 )
 			{
-				if ( strcmp ( "rollOver", ArgsSWF ) ==0 )
+				Logs::info ( "GAME_SWF_EVENT onEvent\n" );
+				const char *CommandSWF=static_cast<const EvGameSWFEvent *> ( ev )->command;
+				const char *ArgsSWF=static_cast<const EvGameSWFEvent *> ( ev )->args;
+
+				/*
+				gamepad
+				gamepad_center
+				gamemenu
+				button_action1
+				button_action2
+				//////
+				rollOver
+				rollOut
+				press
+				release
+				dragOut
+				dragOver
+				*/
+				if ( strcmp ( "gamepad", CommandSWF ) ==0 )
 				{
-					m_gamepad.isRoll=true;
+					if ( strcmp ( "rollOver", ArgsSWF ) ==0 )
+					{
+						m_gamepad.isRoll=true;
+					}
+
+					else if ( strcmp ( "rollOut", ArgsSWF ) ==0 )
+					{
+						m_gamepad.isRoll=false;
+					}
+
+					else if ( strcmp ( "dragOut", ArgsSWF ) ==0 )
+					{
+						m_gamepad.isRoll=false;
+					}
+
+					else if ( strcmp ( "dragOver", ArgsSWF ) ==0 )
+					{
+						m_gamepad.isRoll=true;
+					}
+
+					else if ( strcmp ( "press", ArgsSWF ) ==0 )
+					{
+						m_gamepad.isPresend=true;
+					}
+
+					else if ( strcmp ( "release", ArgsSWF ) ==0 )
+					{
+						m_gamepad.isPresend=false;
+					}
 				}
 
-				else if ( strcmp ( "rollOut", ArgsSWF ) ==0 )
+				else if ( strcmp ( "button_action1", CommandSWF ) ==0 )
 				{
-					m_gamepad.isRoll=false;
-				}
-
-				else if ( strcmp ( "dragOut", ArgsSWF ) ==0 )
-				{
-					m_gamepad.isRoll=false;
-				}
-
-				else if ( strcmp ( "dragOver", ArgsSWF ) ==0 )
-				{
-					m_gamepad.isRoll=true;
-				}
-
-				else if ( strcmp ( "press", ArgsSWF ) ==0 )
-				{
-					m_gamepad.isPresend=true;
-				}
-
-				else if ( strcmp ( "release", ArgsSWF ) ==0 )
-				{
-					m_gamepad.isPresend=false;
+					if ( strcmp ( "release", ArgsSWF ) ==0 )
+					{
+						isCameraFRS=!isCameraFRS;
+					}
 				}
 			}
-
-			else if ( strcmp ( "button_action1", CommandSWF ) ==0 )
-			{
-				if ( strcmp ( "release", ArgsSWF ) ==0 )
-				{
-					isCameraFRS=!isCameraFRS;
-				}
-			}
-
 			break;
 	}
 }

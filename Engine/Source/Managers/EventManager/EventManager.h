@@ -21,6 +21,7 @@ struct Events
 	    EVENT_NULL= 0,			// Null event
 	    IRRLICHT_EVENT,			// EvIrrlichtEvents
 	    GAME_SWF_EVENT,			// GameSWF Events
+	    CHARACTER_EVENT,		// Event for GAME OBJECTS GOCharacter
 	    // Other Event
 	    EVENT_COUNT,			// Event Count
 	};

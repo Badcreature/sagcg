@@ -95,6 +95,12 @@ bool Application::Update()
 		}
 
 #endif
+
+		if ( m_isGame->getScriptManager() )
+		{
+			m_isGame->getScriptManager()->Update ( m_dt );
+		}
+
 		m_isStateMachine->update ( m_dt );
 		m_isEventManager->Update ( ( double ) m_dt );
 		m_isGame->UIManagerUpdate ( ( float ) m_dt );

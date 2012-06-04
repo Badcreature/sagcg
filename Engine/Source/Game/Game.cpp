@@ -81,6 +81,7 @@ Game::Game()
 	m_DrawNumToUpdate=DRAW_TO_UPDATE;
 	m_IrrlichtDevice=NULL;
 	m_SceneManager=NULL;
+	m_ScriptManager=NULL;
 	m_VideoDriver=NULL;
 	m_GUIEnvironment=NULL;
 	m_lastFPS = -1;
@@ -127,6 +128,12 @@ cUIManager	*Game::getUIManager()
 	return m_UIManager;
 }
 
+ScriptManager	*Game::getScriptManager()
+{
+	return m_ScriptManager;
+}
+
+
 #ifdef BOX2D
 b2World	*Game::get2DPhysicsWorld()
 {
@@ -168,16 +175,18 @@ bool Game::Init()
 		return 1;
 	}
 
-	// Init mouse
+	////////////////////////////////////////
+	// Mouse init
+	////////////////////////////////////////
 	m_MouseButtonDown=new bool[irr::NUMBER_OF_MULTI_TOUCHES];
 	m_MouseX=new int[irr::NUMBER_OF_MULTI_TOUCHES];
 	m_MouseY=new int[irr::NUMBER_OF_MULTI_TOUCHES];
 #ifdef WIN32
-	m_MouseCount=1;
+	m_MouseCount=1;//irr::NUMBER_OF_MULTI_TOUCHES;
 #else
 	m_MouseCount=irr::NUMBER_OF_MULTI_TOUCHES;
 #endif
-	// ///
+	////////////////////////////////////////
 	m_IrrlichtDevice->setWindowCaption ( L"Game Engine Window" );
 	m_VideoDriver = m_IrrlichtDevice->getVideoDriver();
 	m_SceneManager = m_IrrlichtDevice->getSceneManager();
@@ -224,6 +233,8 @@ bool Game::Init()
 
 	m_IrrBulletPhysicsWorld->setGravity ( vector3df ( 0,-GRAVITY,0 ) );
 #endif
+	////
+	m_ScriptManager= ScriptManager::getInstance();
 	////////////////////////////////////////
 	m_isGameRun=true;
 	return 0;
