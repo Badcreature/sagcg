@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="9.00"
+	Version="9,00"
 	Name="game"
 	ProjectGUID="{8EC901A9-DCF1-41D8-B903-978566734125}"
 	RootNamespace="game_win32"
@@ -369,6 +369,18 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="ScriptManager"
+				>
+				<File
+					RelativePath="..\..\Source\Managers\ScriptManager\ScriptManager.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\Source\Managers\ScriptManager\ScriptManager.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="MAIN_win32"
@@ -400,6 +412,10 @@
 			<Filter
 				Name="GameEvents"
 				>
+				<File
+					RelativePath="..\..\Source\Game\GameEvents\EvGameCharacterEvent.h"
+					>
+				</File>
 				<File
 					RelativePath="..\..\Source\Game\GameEvents\EvGameSWFEvent.h"
 					>
