@@ -1,0 +1,3 @@
+SaGCG - Simple and Good core Games
+Irrlicht 1.8 + Addons:GameSWF, State Mashine, Event Menager...
+Support platform Win32, IOS
